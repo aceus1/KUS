@@ -20,9 +20,9 @@ namespace bprojekt {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DBSDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBSDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DBSDataSet : global::System.Data.DataSet {
+    public partial class DBSDataSet1 : global::System.Data.DataSet {
         
         private AnlagenverzeichnisDataTable tableAnlagenverzeichnis;
         
@@ -36,7 +36,7 @@ namespace bprojekt {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DBSDataSet() {
+        public DBSDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -47,7 +47,7 @@ namespace bprojekt {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DBSDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DBSDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -172,7 +172,7 @@ namespace bprojekt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DBSDataSet cln = ((DBSDataSet)(base.Clone()));
+            DBSDataSet1 cln = ((DBSDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -271,9 +271,9 @@ namespace bprojekt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DBSDataSet";
+            this.DataSetName = "DBSDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DBSDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DBSDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAnlagenverzeichnis = new AnlagenverzeichnisDataTable();
@@ -321,7 +321,7 @@ namespace bprojekt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DBSDataSet ds = new DBSDataSet();
+            DBSDataSet1 ds = new DBSDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -679,7 +679,7 @@ namespace bprojekt {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBSDataSet ds = new DBSDataSet();
+                DBSDataSet1 ds = new DBSDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1033,7 +1033,7 @@ namespace bprojekt {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBSDataSet ds = new DBSDataSet();
+                DBSDataSet1 ds = new DBSDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1367,7 +1367,7 @@ namespace bprojekt {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBSDataSet ds = new DBSDataSet();
+                DBSDataSet1 ds = new DBSDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1655,7 +1655,7 @@ namespace bprojekt {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBSDataSet ds = new DBSDataSet();
+                DBSDataSet1 ds = new DBSDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2515,7 +2515,7 @@ namespace bprojekt {
         }
     }
 }
-namespace bprojekt.DBSDataSetTableAdapters {
+namespace bprojekt.DBSDataSet1TableAdapters {
     
     
     /// <summary>
@@ -2711,7 +2711,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString;
+            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2729,7 +2729,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBSDataSet.AnlagenverzeichnisDataTable dataTable) {
+        public virtual int Fill(DBSDataSet1.AnlagenverzeichnisDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2742,9 +2742,9 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBSDataSet.AnlagenverzeichnisDataTable GetData() {
+        public virtual DBSDataSet1.AnlagenverzeichnisDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBSDataSet.AnlagenverzeichnisDataTable dataTable = new DBSDataSet.AnlagenverzeichnisDataTable();
+            DBSDataSet1.AnlagenverzeichnisDataTable dataTable = new DBSDataSet1.AnlagenverzeichnisDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2752,14 +2752,14 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet.AnlagenverzeichnisDataTable dataTable) {
+        public virtual int Update(DBSDataSet1.AnlagenverzeichnisDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet dataSet) {
+        public virtual int Update(DBSDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Anlagenverzeichnis");
         }
         
@@ -3136,7 +3136,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString;
+            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3154,7 +3154,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBSDataSet.BuchungenDataTable dataTable) {
+        public virtual int Fill(DBSDataSet1.BuchungenDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3167,9 +3167,9 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBSDataSet.BuchungenDataTable GetData() {
+        public virtual DBSDataSet1.BuchungenDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBSDataSet.BuchungenDataTable dataTable = new DBSDataSet.BuchungenDataTable();
+            DBSDataSet1.BuchungenDataTable dataTable = new DBSDataSet1.BuchungenDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3177,14 +3177,14 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet.BuchungenDataTable dataTable) {
+        public virtual int Update(DBSDataSet1.BuchungenDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet dataSet) {
+        public virtual int Update(DBSDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Buchungen");
         }
         
@@ -3548,7 +3548,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString;
+            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3566,7 +3566,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBSDataSet.FahrtenbuchDataTable dataTable) {
+        public virtual int Fill(DBSDataSet1.FahrtenbuchDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3579,9 +3579,9 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBSDataSet.FahrtenbuchDataTable GetData() {
+        public virtual DBSDataSet1.FahrtenbuchDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBSDataSet.FahrtenbuchDataTable dataTable = new DBSDataSet.FahrtenbuchDataTable();
+            DBSDataSet1.FahrtenbuchDataTable dataTable = new DBSDataSet1.FahrtenbuchDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3589,14 +3589,14 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet.FahrtenbuchDataTable dataTable) {
+        public virtual int Update(DBSDataSet1.FahrtenbuchDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet dataSet) {
+        public virtual int Update(DBSDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Fahrtenbuch");
         }
         
@@ -3935,7 +3935,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString;
+            this._connection.ConnectionString = global::bprojekt.Properties.Settings.Default.DBSConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3952,7 +3952,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBSDataSet.LoginDataTable dataTable) {
+        public virtual int Fill(DBSDataSet1.LoginDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3965,9 +3965,9 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBSDataSet.LoginDataTable GetData() {
+        public virtual DBSDataSet1.LoginDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBSDataSet.LoginDataTable dataTable = new DBSDataSet.LoginDataTable();
+            DBSDataSet1.LoginDataTable dataTable = new DBSDataSet1.LoginDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3975,14 +3975,14 @@ namespace bprojekt.DBSDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet.LoginDataTable dataTable) {
+        public virtual int Update(DBSDataSet1.LoginDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBSDataSet dataSet) {
+        public virtual int Update(DBSDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Login");
         }
         
@@ -4289,7 +4289,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DBSDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DBSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._anlagenverzeichnisTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Anlagenverzeichnis.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4335,7 +4335,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DBSDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DBSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._anlagenverzeichnisTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Anlagenverzeichnis.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4377,7 +4377,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DBSDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DBSDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._loginTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Login.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4443,7 +4443,7 @@ namespace bprojekt.DBSDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DBSDataSet dataSet) {
+        public virtual int UpdateAll(DBSDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

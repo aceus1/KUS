@@ -43,5 +43,16 @@ namespace bprojekt.Properties {
                 return ((string)(this["DBSConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"\\\\gstiess\\3AHIF\\_Programmieren und " +
+            "Software Engineering_\\POSProjekte\\Aliji_Bauer_Kumar_Wang\\DBS.mdb\"")]
+        public string DBSConnectionString1 {
+            get {
+                return ((string)(this["DBSConnectionString1"]));
+            }
+        }
     }
 }

@@ -56,10 +56,10 @@
     <Compile Include="Buchungen.Designer.cs">
       <DependentUpon>Buchungen.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBSDataSet.Designer.cs">
+    <Compile Include="DBSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSDataSet.xsd</DependentUpon>
+      <DependentUpon>DBSDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Fahrtbuch.cs">
       <SubType>Form</SubType>
@@ -109,16 +109,16 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DBSDataSet.xsc">
-      <DependentUpon>DBSDataSet.xsd</DependentUpon>
+    <None Include="DBSDataSet1.xsc">
+      <DependentUpon>DBSDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DBSDataSet.xsd">
+    <None Include="DBSDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBSDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBSDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBSDataSet.xss">
-      <DependentUpon>DBSDataSet.xsd</DependentUpon>
+    <None Include="DBSDataSet1.xss">
+      <DependentUpon>DBSDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
