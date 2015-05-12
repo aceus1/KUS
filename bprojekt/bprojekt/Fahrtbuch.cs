@@ -101,57 +101,82 @@ namespace bprojekt
                 zielortr = true;
             }
         }
-
-        private void ankmtb_TextChanged(object sender, EventArgs e)
+        private void endkcheck()
         {
-            if (!zahl(ankmtb.Text,ankmtb.Text.Length))
+            try
+            {
+                if (double.Parse(endkmtb.Text)<double.Parse(ankmtb.Text))
+                {
+                    endkmtb.BackColor = Color.Red;
+                    ekmstr = false;
+                }
+                else
+                {
+                    endkmtb.BackColor = Color.Green;
+                    ekmstr = true;
+                }
+            }
+            catch (Exception)
+            {
+                endkmtb.BackColor = Color.Red;
+                ekmstr = false;
+            }
+            
+        }
+        private void ankcheck()
+        {
+            try
+            {
+                if (double.Parse(endkmtb.Text) < double.Parse(ankmtb.Text))
+                {
+                    ankmtb.BackColor = Color.Red;
+                    akmstr = false;
+                }
+                else
+                {
+                    ankmtb.BackColor = Color.Green;
+                    akmstr = true;
+                }
+            }
+            catch (Exception)
             {
                 ankmtb.BackColor = Color.Red;
                 akmstr = false;
             }
-            else
-            {
-                ankmtb.BackColor = Color.Green;
-                akmstr = true;
-            }
         }
-        private bool zahl(string z, int laenge)
+        private void ankmtb_TextChanged(object sender, EventArgs e)
         {
-            bool check = false;
-            for (int i = 0; i < laenge; i++)
-            {
-                for (char j = '0'; j < '9'; j++)
-                {
-                    if (z[i] == j)
-                    {
-                        check = true;
-                    }
-                }
-                if (!check)
-                {
-                    return false;
-                }
-                else
-                {
-                    check = false;
-                }
-
-            }
-            return true;
+            ankcheck();
+            endkcheck();
         }
+        //private bool zahl(string z, int laenge) chens arbeit
+        //{
+        //    bool check = false;
+        //    for (int i = 0; i < laenge; i++)
+        //    {
+        //        for (char j = '0'; j < '9'; j++)
+        //        {
+        //            if (z[i] == j)
+        //            {
+        //                check = true;
+        //            }
+        //        }
+        //        if (!check)
+        //        {
+        //            return false;
+        //        }
+        //        else
+        //        {
+        //            check = false;
+        //        }
+
+        //    }
+        //    return true;
+        //}
         private void endkmtb_TextChanged(object sender, EventArgs e)
         {
-            if (!zahl(endkmtb.Text, endkmtb.Text.Length))
-            {
-                endkmtb.BackColor = Color.Red;
-                ekmstr = false;
-
-            }
-            else
-            {
-                endkmtb.BackColor = Color.Green;
-                ekmstr = true;
-            }
+            ankcheck();
+            endkcheck();
         }
 
     }
