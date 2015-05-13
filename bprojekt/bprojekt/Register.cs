@@ -13,6 +13,11 @@ namespace bprojekt
 {
     public partial class Register : Form
     {
+        /*Funktion Register: 
+         *Beim Regestrieren hat man Recht "0" und ist sozusagen Gast
+         *Admin kann das Recht Später hoch setzten
+         */
+        Dictionary<string, User> DUser;
         OleDbCommand cmd;
         OleDbConnection conn;
         public Register()
@@ -28,14 +33,15 @@ namespace bprojekt
         private void Register_Load(object sender, EventArgs e)
         {
             OleDbDataReader reader;
-
             conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
             conn.Open();
-            cmd = new OleDbCommand("SELECT * FROM Lager", conn);
+            cmd = new OleDbCommand("SELECT * FROM Login", conn);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-
+                DUser.Add(reader["ID"].ToString(),
+                new User(reader["ID"].ToString(),reader["Password"].ToString(),int.Parse(reader["Rang"].ToString()))
+                );
             }
             reader.Close();
         }

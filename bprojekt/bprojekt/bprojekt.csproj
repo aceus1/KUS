@@ -88,6 +88,7 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Verwaltung.cs" />
     <EmbeddedResource Include="Fahrtbuch.resx">
       <DependentUpon>Fahrtbuch.cs</DependentUpon>
