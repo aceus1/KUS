@@ -49,9 +49,10 @@ namespace bprojekt
         private void Datumtb_TextChanged(object sender, EventArgs e)
         {
             #region DatumTesten
-            if (Datumtb.Text.Length == 10)
+            if (Datumtb.Text.Length == 10) //Überprüft ob in der Textbox der Text genau 10 Zeichen lang ist
             {
-                if (Datumtb.Text.Contains("."))
+                -if (Datumtb.Text.Contains(".") == true)
+                    /*Überprüft ob das Datum überhaupt einen Punkt enthält*/
                 {
                     try
                     {
@@ -64,6 +65,11 @@ namespace bprojekt
                         Datumtb.BackColor = Color.Red;
                         datumbr = false;
                     }
+                }
+                else
+                {
+                    Datumtb.BackColor = Color.Red;
+                    datumbr = false;
                 }            
             }
             else
@@ -71,6 +77,7 @@ namespace bprojekt
                 Datumtb.BackColor = Color.Red;
                 datumbr = false;
             }
+            
             #endregion
         }
 
