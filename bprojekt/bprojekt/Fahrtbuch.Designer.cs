@@ -45,6 +45,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dbsDataSet11 = new bprojekt.DBSDataSet1();
             this.fahrtenbuchTableAdapter = new bprojekt.DBSDataSet1TableAdapters.FahrtenbuchTableAdapter();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbsDataSet11)).BeginInit();
@@ -172,6 +173,12 @@
             // 
             this.fahrtenbuchTableAdapter.ClearBeforeFill = true;
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // Fahrtbuch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +220,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn zielortDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anfangskmstandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endkmstandDataGridViewTextBoxColumn;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
 
     }
 }

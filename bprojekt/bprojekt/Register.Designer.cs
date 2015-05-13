@@ -39,7 +39,7 @@
             // 
             // registerbutton
             // 
-            this.registerbutton.Location = new System.Drawing.Point(31, 91);
+            this.registerbutton.Location = new System.Drawing.Point(40, 91);
             this.registerbutton.Name = "registerbutton";
             this.registerbutton.Size = new System.Drawing.Size(201, 23);
             this.registerbutton.TabIndex = 0;
@@ -80,6 +80,7 @@
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(144, 20);
             this.Username.TabIndex = 4;
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // Password
             // 
