@@ -51,17 +51,20 @@ namespace bprojekt
             #region DatumTesten
             if (Datumtb.Text.Length == 10)
             {
-                try
+                if (Datumtb.Text.Contains("."))
                 {
-                    DateTime.Parse(Datumtb.Text);
-                    Datumtb.BackColor = Color.Green;
-                    datumbr = true;
-                }
-                catch (Exception)
-                {
-                    Datumtb.BackColor = Color.Red;
-                    datumbr = false;
-                }   
+                    try
+                    {
+                        DateTime.Parse(Datumtb.Text);
+                        Datumtb.BackColor = Color.Green;
+                        datumbr = true;
+                    }
+                    catch (Exception)
+                    {
+                        Datumtb.BackColor = Color.Red;
+                        datumbr = false;
+                    }
+                }            
             }
             else
             {
@@ -77,8 +80,6 @@ namespace bprojekt
             {
                 Abfahrtsorttb.BackColor = Color.Red;
                 abfahrtortr = false;
-
-                
             }
             else
             {
@@ -93,7 +94,6 @@ namespace bprojekt
             {
                 Zielorttb.BackColor = Color.Red;
                 zielortr = false;
-
             }
             else
             {
