@@ -39,8 +39,8 @@ namespace bprojekt
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                DUser.Add(reader["ID"].ToString(),
-                new User(reader["ID"].ToString(),reader["Password"].ToString(),int.Parse(reader["Rang"].ToString()))
+                DUser.Add(reader["User"].ToString(),
+                new User(reader["User"].ToString(),reader["Password"].ToString(),int.Parse(reader["Rang"].ToString()))
                 );
             }
             reader.Close();
@@ -48,6 +48,7 @@ namespace bprojekt
 
         private void registerbutton_Click(object sender, EventArgs e)
         {
+            
             if (Password.Text != Password2.Text)
             {
                 MessageBox.Show("Die Passwörter stimmen nicht überein");

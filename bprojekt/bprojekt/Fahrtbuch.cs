@@ -51,7 +51,7 @@ namespace bprojekt
             #region DatumTesten
             if (Datumtb.Text.Length == 10) //Überprüft ob in der Textbox der Text genau 10 Zeichen lang ist
             {
-                -if (Datumtb.Text.Contains(".") == true)
+                if (Datumtb.Text.Contains(".") == true)
                     /*Überprüft ob das Datum überhaupt einen Punkt enthält*/
                 {
                     try

@@ -53,7 +53,7 @@
             // 
             // savebutton
             // 
-            this.savebutton.Location = new System.Drawing.Point(234, 214);
+            this.savebutton.Location = new System.Drawing.Point(12, 168);
             this.savebutton.Name = "savebutton";
             this.savebutton.Size = new System.Drawing.Size(114, 36);
             this.savebutton.TabIndex = 1;
@@ -120,6 +120,7 @@
             this.dataGridView1.DataSource = this.bindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(654, 150);
             this.dataGridView1.TabIndex = 7;
             // 
@@ -128,36 +129,42 @@
             this.fahrtIDDataGridViewTextBoxColumn.DataPropertyName = "FahrtID";
             this.fahrtIDDataGridViewTextBoxColumn.HeaderText = "FahrtID";
             this.fahrtIDDataGridViewTextBoxColumn.Name = "fahrtIDDataGridViewTextBoxColumn";
+            this.fahrtIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datumDataGridViewTextBoxColumn
             // 
             this.datumDataGridViewTextBoxColumn.DataPropertyName = "Datum";
             this.datumDataGridViewTextBoxColumn.HeaderText = "Datum";
             this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            this.datumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // abfahrtsortDataGridViewTextBoxColumn
             // 
             this.abfahrtsortDataGridViewTextBoxColumn.DataPropertyName = "Abfahrtsort";
             this.abfahrtsortDataGridViewTextBoxColumn.HeaderText = "Abfahrtsort";
             this.abfahrtsortDataGridViewTextBoxColumn.Name = "abfahrtsortDataGridViewTextBoxColumn";
+            this.abfahrtsortDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // zielortDataGridViewTextBoxColumn
             // 
             this.zielortDataGridViewTextBoxColumn.DataPropertyName = "Zielort";
             this.zielortDataGridViewTextBoxColumn.HeaderText = "Zielort";
             this.zielortDataGridViewTextBoxColumn.Name = "zielortDataGridViewTextBoxColumn";
+            this.zielortDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // anfangskmstandDataGridViewTextBoxColumn
             // 
             this.anfangskmstandDataGridViewTextBoxColumn.DataPropertyName = "Anfangskmstand";
             this.anfangskmstandDataGridViewTextBoxColumn.HeaderText = "Anfangskmstand";
             this.anfangskmstandDataGridViewTextBoxColumn.Name = "anfangskmstandDataGridViewTextBoxColumn";
+            this.anfangskmstandDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // endkmstandDataGridViewTextBoxColumn
             // 
             this.endkmstandDataGridViewTextBoxColumn.DataPropertyName = "Endkmstand";
             this.endkmstandDataGridViewTextBoxColumn.HeaderText = "Endkmstand";
             this.endkmstandDataGridViewTextBoxColumn.Name = "endkmstandDataGridViewTextBoxColumn";
+            this.endkmstandDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bindingSource1
             // 
