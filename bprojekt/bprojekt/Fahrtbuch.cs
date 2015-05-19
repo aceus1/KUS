@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,10 +36,30 @@ namespace bprojekt
 
         private void savebutton_Click(object sender, EventArgs e)
         {
+            fahrtidlesen();
             if (datumbr == true && abfahrtortr == true && zielortr == true && akmstr == true && ekmstr == true)//Wenn alle Felder Grün sind speichert er erst in die Datenbank
             {
                 
             }
+        }
+
+        private int fahrtidlesen()
+        {
+            OleDbCommand cmd;
+            OleDbConnection conn;
+            OleDbDataReader reader;
+            int biggest = 0;
+            conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+            conn.Open();
+            cmd = new OleDbCommand("SELECT FahrtID FROM Fahrtenbuch ORDER BY FahrtID DESC", conn);
+            reader = cmd.ExecuteReader();
+            MessageBox.Show(reader.Read().ToString());
+            biggest = int.Parse(reader.Read().ToString());
+            reader.Close();
+            conn.Close();
+            return biggest;
+
+
         }
         private bool datumbr = false;
         private bool abfahrtortr = false;
