@@ -20,7 +20,6 @@ namespace bprojekt
         Dictionary<string, User> DUser = new Dictionary<string, User>();
         OleDbCommand cmd;
         OleDbConnection conn;
-        string text1="", text2="";
         public Register()
         {
             InitializeComponent();
@@ -54,7 +53,7 @@ namespace bprojekt
 
         private void registerbutton_Click(object sender, EventArgs e)
         {
-            bool check = true;
+            bool check = true,check2=true;
             if (Password.Text.Length < 6 || Password.Text.Length > 20 )
             {
                 MessageBox.Show("Das Passwort muss zwischen 6 und 20 Zeichen lang sein ");
@@ -81,12 +80,15 @@ namespace bprojekt
 
                     cmd.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("unbekannter Fehler!");
-                    throw;
+                    MessageBox.Show("unbekannter Fehler!" + "\r" + ex.ToString());
+                    check2 = false;
                 }
-                MessageBox.Show("Die Registration wurde erfolgreich abgeschlossen!");
+                if (check2)
+                {
+                   MessageBox.Show("Die Registration wurde erfolgreich abgeschlossen!");
+                }
             }
         }
 

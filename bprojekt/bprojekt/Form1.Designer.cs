@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
-            this.guest = new System.Windows.Forms.Button();
             this.register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,16 +79,6 @@
             this.password.Size = new System.Drawing.Size(100, 20);
             this.password.TabIndex = 4;
             // 
-            // guest
-            // 
-            this.guest.Location = new System.Drawing.Point(45, 142);
-            this.guest.Name = "guest";
-            this.guest.Size = new System.Drawing.Size(178, 23);
-            this.guest.TabIndex = 5;
-            this.guest.Text = "Gast Login";
-            this.guest.UseVisualStyleBackColor = true;
-            this.guest.Click += new System.EventHandler(this.guest_Click);
-            // 
             // register
             // 
             this.register.Location = new System.Drawing.Point(45, 113);
@@ -106,7 +95,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(262, 183);
             this.Controls.Add(this.register);
-            this.Controls.Add(this.guest);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label2);
@@ -127,7 +115,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Button guest;
         private System.Windows.Forms.Button register;
     }
 }

@@ -37,7 +37,7 @@
             // 
             this.Buchungen.Location = new System.Drawing.Point(41, 43);
             this.Buchungen.Name = "Buchungen";
-            this.Buchungen.Size = new System.Drawing.Size(106, 23);
+            this.Buchungen.Size = new System.Drawing.Size(208, 23);
             this.Buchungen.TabIndex = 0;
             this.Buchungen.Text = "Buchungen";
             this.Buchungen.UseVisualStyleBackColor = true;
@@ -46,16 +46,17 @@
             // 
             this.Fahrtenbuch.Location = new System.Drawing.Point(41, 88);
             this.Fahrtenbuch.Name = "Fahrtenbuch";
-            this.Fahrtenbuch.Size = new System.Drawing.Size(106, 24);
+            this.Fahrtenbuch.Size = new System.Drawing.Size(208, 24);
             this.Fahrtenbuch.TabIndex = 1;
             this.Fahrtenbuch.Text = "Fahrtenbuch ";
             this.Fahrtenbuch.UseVisualStyleBackColor = true;
+            this.Fahrtenbuch.Click += new System.EventHandler(this.Fahrtenbuch_Click);
             // 
             // Anlagenverzeichnis
             // 
             this.Anlagenverzeichnis.Location = new System.Drawing.Point(41, 129);
             this.Anlagenverzeichnis.Name = "Anlagenverzeichnis";
-            this.Anlagenverzeichnis.Size = new System.Drawing.Size(106, 23);
+            this.Anlagenverzeichnis.Size = new System.Drawing.Size(208, 23);
             this.Anlagenverzeichnis.TabIndex = 2;
             this.Anlagenverzeichnis.Text = "Anlageverzeichnis";
             this.Anlagenverzeichnis.UseVisualStyleBackColor = true;

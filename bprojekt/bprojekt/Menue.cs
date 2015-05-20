@@ -16,5 +16,11 @@ namespace bprojekt
         {
             InitializeComponent();
         }
+
+        private void Fahrtenbuch_Click(object sender, EventArgs e)
+        {
+            Fahrtbuch fahrtenbuch = new Fahrtbuch();
+            fahrtenbuch.Show();
+        }
     }
 }
