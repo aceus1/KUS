@@ -36,10 +36,17 @@ namespace bprojekt
 
         private void savebutton_Click(object sender, EventArgs e)
         {
+            OleDbCommand cmd;
+            OleDbConnection conn;
+            string cmdstr;
+            conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+            
             fahrtidlesen();
             if (datumbr == true && abfahrtortr == true && zielortr == true && akmstr == true && ekmstr == true)//Wenn alle Felder Grün sind speichert er erst in die Datenbank
             {
-                
+                conn.Open();
+                cmdstr = "INSERT INTO Fahrtenbuch (FahrtID, Datum, Abfahrtsort, Zielort, Anfangskmst, Endkmst) VALUES ('" + (fahrtidlesen() + 1) + "','" + Datumtb.Text + "','" + Abfahrtsorttb.Text +"','"+ Zielorttb.Text +"','"+ ankmtb.Text +"','" + endkmtb +"'";
+                //TODO: cmdstr absenden an die Datenbank
             }
         }
 
@@ -53,8 +60,9 @@ namespace bprojekt
             conn.Open();
             cmd = new OleDbCommand("SELECT FahrtID FROM Fahrtenbuch ORDER BY FahrtID DESC", conn);
             reader = cmd.ExecuteReader();
-            MessageBox.Show(reader.Read().ToString());
-            biggest = int.Parse(reader.Read().ToString());
+            reader.Read ();
+            //MessageBox.Show(reader["FahrtID"].ToString());
+            biggest = int.Parse(reader["FahrtID"].ToString());
             reader.Close();
             conn.Close();
             return biggest;
