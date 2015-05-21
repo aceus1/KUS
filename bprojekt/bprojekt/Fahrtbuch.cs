@@ -225,9 +225,10 @@ namespace bprojekt
                     cmd = new OleDbCommand(cmdstr, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    dataGridView1.Update();
                     Fahrtbuch a = new Fahrtbuch();
                     this.Close();
-                    a.Show();   
+                    a.Show(); 
                 }
             }
             catch (Exception ex)

@@ -29,10 +29,125 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dBSDataSet1 = new bprojekt.DBSDataSet1();
+            this.buchungenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buchungenTableAdapter = new bprojekt.DBSDataSet1TableAdapters.BuchungenTableAdapter();
+            this.belegnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ustDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wertDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ustSummeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eADatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.belegnummerDataGridViewTextBoxColumn,
+            this.artDataGridViewTextBoxColumn,
+            this.ustDataGridViewTextBoxColumn,
+            this.wertDataGridViewTextBoxColumn,
+            this.ustSummeDataGridViewTextBoxColumn,
+            this.reDatumDataGridViewTextBoxColumn,
+            this.eADatumDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.buchungenBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(759, 227);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dBSDataSet1
+            // 
+            this.dBSDataSet1.DataSetName = "DBSDataSet1";
+            this.dBSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buchungenBindingSource
+            // 
+            this.buchungenBindingSource.DataMember = "Buchungen";
+            this.buchungenBindingSource.DataSource = this.dBSDataSet1;
+            // 
+            // buchungenTableAdapter
+            // 
+            this.buchungenTableAdapter.ClearBeforeFill = true;
+            // 
+            // belegnummerDataGridViewTextBoxColumn
+            // 
+            this.belegnummerDataGridViewTextBoxColumn.DataPropertyName = "Belegnummer";
+            this.belegnummerDataGridViewTextBoxColumn.HeaderText = "Belegnummer";
+            this.belegnummerDataGridViewTextBoxColumn.Name = "belegnummerDataGridViewTextBoxColumn";
+            // 
+            // artDataGridViewTextBoxColumn
+            // 
+            this.artDataGridViewTextBoxColumn.DataPropertyName = "Art";
+            this.artDataGridViewTextBoxColumn.HeaderText = "Art";
+            this.artDataGridViewTextBoxColumn.Name = "artDataGridViewTextBoxColumn";
+            // 
+            // ustDataGridViewTextBoxColumn
+            // 
+            this.ustDataGridViewTextBoxColumn.DataPropertyName = "Ust";
+            this.ustDataGridViewTextBoxColumn.HeaderText = "Ust";
+            this.ustDataGridViewTextBoxColumn.Name = "ustDataGridViewTextBoxColumn";
+            // 
+            // wertDataGridViewTextBoxColumn
+            // 
+            this.wertDataGridViewTextBoxColumn.DataPropertyName = "Wert";
+            this.wertDataGridViewTextBoxColumn.HeaderText = "Wert";
+            this.wertDataGridViewTextBoxColumn.Name = "wertDataGridViewTextBoxColumn";
+            // 
+            // ustSummeDataGridViewTextBoxColumn
+            // 
+            this.ustSummeDataGridViewTextBoxColumn.DataPropertyName = "Ust-Summe";
+            this.ustSummeDataGridViewTextBoxColumn.HeaderText = "Ust-Summe";
+            this.ustSummeDataGridViewTextBoxColumn.Name = "ustSummeDataGridViewTextBoxColumn";
+            // 
+            // reDatumDataGridViewTextBoxColumn
+            // 
+            this.reDatumDataGridViewTextBoxColumn.DataPropertyName = "Re-Datum";
+            this.reDatumDataGridViewTextBoxColumn.HeaderText = "Re-Datum";
+            this.reDatumDataGridViewTextBoxColumn.Name = "reDatumDataGridViewTextBoxColumn";
+            // 
+            // eADatumDataGridViewTextBoxColumn
+            // 
+            this.eADatumDataGridViewTextBoxColumn.DataPropertyName = "EA-Datum";
+            this.eADatumDataGridViewTextBoxColumn.HeaderText = "EA-Datum";
+            this.eADatumDataGridViewTextBoxColumn.Name = "eADatumDataGridViewTextBoxColumn";
+            // 
+            // Buchungen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(783, 358);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Buchungen";
             this.Text = "Buchungen";
+            this.Load += new System.EventHandler(this.Buchungen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DBSDataSet1 dBSDataSet1;
+        private System.Windows.Forms.BindingSource buchungenBindingSource;
+        private DBSDataSet1TableAdapters.BuchungenTableAdapter buchungenTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn belegnummerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ustDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wertDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ustSummeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reDatumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eADatumDataGridViewTextBoxColumn;
     }
 }

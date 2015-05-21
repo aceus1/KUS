@@ -22,5 +22,11 @@ namespace bprojekt
             Fahrtbuch fahrtenbuch = new Fahrtbuch();
             fahrtenbuch.Show();
         }
+
+        private void Buchungen_Click(object sender, EventArgs e)
+        {
+            Buchungen a = new Buchungen();
+            a.Show();
+        }
     }
 }

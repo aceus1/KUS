@@ -90,6 +90,9 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Verwaltung.cs" />
+    <EmbeddedResource Include="Buchungen.resx">
+      <DependentUpon>Buchungen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fahrtbuch.resx">
       <DependentUpon>Fahrtbuch.cs</DependentUpon>
     </EmbeddedResource>
