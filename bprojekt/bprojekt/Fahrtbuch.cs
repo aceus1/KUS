@@ -36,38 +36,35 @@ namespace bprojekt
 
         private void savebutton_Click(object sender, EventArgs e)
         {
-            OleDbCommand cmd;
-            OleDbConnection conn;
-            string cmdstr;
-            conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
-            
-            fahrtidlesen();
-            if (datumbr == true && abfahrtortr == true && zielortr == true && akmstr == true && ekmstr == true)//Wenn alle Felder Grün sind speichert er erst in die Datenbank
+            try
             {
-                conn.Open();
-                cmdstr = "INSERT INTO Fahrtenbuch (FahrtID, Datum, Abfahrtsort, Zielort, Anfangskmst, Endkmst) VALUES ('" + (fahrtidlesen() + 1) + "','" + Datumtb.Text + "','" + Abfahrtsorttb.Text +"','"+ Zielorttb.Text +"','"+ ankmtb.Text +"','" + endkmtb +"'";
-                //TODO: cmdstr absenden an die Datenbank
+                #region Datenbankschreiben-Fahrtenbuch
+                OleDbCommand cmd;
+                OleDbConnection conn;
+                string cmdstr;
+                conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                if (datumbr == true && abfahrtortr == true && zielortr == true && akmstr == true && ekmstr == true)//Wenn alle Felder Grün sind speichert er erst in die Datenbank
+                {
+                    conn.Open();
+                    cmdstr = "INSERT INTO Fahrtenbuch (Datum, Abfahrtsort, Zielort, Anfangskmstand, Endkmstand) VALUES ('" + Datumtb.Text + "','" + Abfahrtsorttb.Text + "','" + Zielorttb.Text + "'," + ankmtb.Text + "," + endkmtb.Text + ")";
+                    cmd = new OleDbCommand(cmdstr, conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Fahrtbuch a = new Fahrtbuch();
+                    this.Close();
+                    a.Show();
+                }
+                #endregion
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+                
         }
-
-        private int fahrtidlesen()
+        private void updatetabelle()
         {
-            OleDbCommand cmd;
-            OleDbConnection conn;
-            OleDbDataReader reader;
-            int biggest = 0;
-            conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
-            conn.Open();
-            cmd = new OleDbCommand("SELECT FahrtID FROM Fahrtenbuch ORDER BY FahrtID DESC", conn);
-            reader = cmd.ExecuteReader();
-            reader.Read ();
-            //MessageBox.Show(reader["FahrtID"].ToString());
-            biggest = int.Parse(reader["FahrtID"].ToString());
-            reader.Close();
-            conn.Close();
-            return biggest;
-
-
+            
         }
         private bool datumbr = false;
         private bool abfahrtortr = false;
@@ -214,6 +211,29 @@ namespace bprojekt
             ankcheck();
             endkcheck();
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DeleteID.Text != "")
+                {
+                    string cmdstr = "DELETE FROM Fahrtenbuch WHERE Fahrtid = " + DeleteID.Text;
+                    OleDbCommand cmd;
+                    OleDbConnection conn;
+                    conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                    conn.Open();
+                    cmd = new OleDbCommand(cmdstr, conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Fahrtbuch a = new Fahrtbuch();
+                    this.Close();
+                    a.Show();   
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

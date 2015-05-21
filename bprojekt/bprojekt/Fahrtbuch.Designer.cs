@@ -46,6 +46,9 @@
             this.dbsDataSet11 = new bprojekt.DBSDataSet1();
             this.fahrtenbuchTableAdapter = new bprojekt.DBSDataSet1TableAdapters.FahrtenbuchTableAdapter();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.DeleteID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbsDataSet11)).BeginInit();
@@ -53,9 +56,10 @@
             // 
             // savebutton
             // 
-            this.savebutton.Location = new System.Drawing.Point(12, 168);
+            this.savebutton.Location = new System.Drawing.Point(16, 207);
+            this.savebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.savebutton.Name = "savebutton";
-            this.savebutton.Size = new System.Drawing.Size(114, 36);
+            this.savebutton.Size = new System.Drawing.Size(152, 44);
             this.savebutton.TabIndex = 1;
             this.savebutton.Text = "Speichern";
             this.savebutton.UseVisualStyleBackColor = true;
@@ -63,45 +67,50 @@
             // 
             // endkmtb
             // 
-            this.endkmtb.Location = new System.Drawing.Point(566, 168);
+            this.endkmtb.Location = new System.Drawing.Point(755, 207);
+            this.endkmtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.endkmtb.Name = "endkmtb";
-            this.endkmtb.Size = new System.Drawing.Size(100, 20);
+            this.endkmtb.Size = new System.Drawing.Size(132, 22);
             this.endkmtb.TabIndex = 2;
             this.endkmtb.Text = "Endkmstand";
             this.endkmtb.TextChanged += new System.EventHandler(this.endkmtb_TextChanged);
             // 
             // ankmtb
             // 
-            this.ankmtb.Location = new System.Drawing.Point(460, 168);
+            this.ankmtb.Location = new System.Drawing.Point(613, 207);
+            this.ankmtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ankmtb.Name = "ankmtb";
-            this.ankmtb.Size = new System.Drawing.Size(100, 20);
+            this.ankmtb.Size = new System.Drawing.Size(132, 22);
             this.ankmtb.TabIndex = 3;
             this.ankmtb.Text = "Anfangskmstand";
             this.ankmtb.TextChanged += new System.EventHandler(this.ankmtb_TextChanged);
             // 
             // Zielorttb
             // 
-            this.Zielorttb.Location = new System.Drawing.Point(354, 168);
+            this.Zielorttb.Location = new System.Drawing.Point(472, 207);
+            this.Zielorttb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Zielorttb.Name = "Zielorttb";
-            this.Zielorttb.Size = new System.Drawing.Size(100, 20);
+            this.Zielorttb.Size = new System.Drawing.Size(132, 22);
             this.Zielorttb.TabIndex = 4;
             this.Zielorttb.Text = "Zielort";
             this.Zielorttb.TextChanged += new System.EventHandler(this.Zielorttb_TextChanged);
             // 
             // Abfahrtsorttb
             // 
-            this.Abfahrtsorttb.Location = new System.Drawing.Point(248, 168);
+            this.Abfahrtsorttb.Location = new System.Drawing.Point(331, 207);
+            this.Abfahrtsorttb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Abfahrtsorttb.Name = "Abfahrtsorttb";
-            this.Abfahrtsorttb.Size = new System.Drawing.Size(100, 20);
+            this.Abfahrtsorttb.Size = new System.Drawing.Size(132, 22);
             this.Abfahrtsorttb.TabIndex = 5;
             this.Abfahrtsorttb.Text = "Abfahrtsort";
             this.Abfahrtsorttb.TextChanged += new System.EventHandler(this.Abfahrtsorttb_TextChanged);
             // 
             // Datumtb
             // 
-            this.Datumtb.Location = new System.Drawing.Point(142, 168);
+            this.Datumtb.Location = new System.Drawing.Point(189, 207);
+            this.Datumtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Datumtb.Name = "Datumtb";
-            this.Datumtb.Size = new System.Drawing.Size(100, 20);
+            this.Datumtb.Size = new System.Drawing.Size(132, 22);
             this.Datumtb.TabIndex = 6;
             this.Datumtb.Text = "Datum";
             this.Datumtb.TextChanged += new System.EventHandler(this.Datumtb_TextChanged);
@@ -118,10 +127,11 @@
             this.anfangskmstandDataGridViewTextBoxColumn,
             this.endkmstandDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(654, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(872, 185);
             this.dataGridView1.TabIndex = 7;
             // 
             // fahrtIDDataGridViewTextBoxColumn
@@ -186,11 +196,40 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // DeleteID
+            // 
+            this.DeleteID.Location = new System.Drawing.Point(13, 312);
+            this.DeleteID.Name = "DeleteID";
+            this.DeleteID.Size = new System.Drawing.Size(100, 22);
+            this.DeleteID.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 289);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "ID zum Löschen";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(120, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Löschen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Fahrtbuch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 262);
+            this.ClientSize = new System.Drawing.Size(883, 346);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DeleteID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Datumtb);
             this.Controls.Add(this.Abfahrtsorttb);
@@ -198,6 +237,7 @@
             this.Controls.Add(this.ankmtb);
             this.Controls.Add(this.endkmtb);
             this.Controls.Add(this.savebutton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Fahrtbuch";
             this.Text = "Fahrtbuch";
             this.Load += new System.EventHandler(this.Fahrtbuch_Load);
@@ -228,6 +268,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn anfangskmstandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endkmstandDataGridViewTextBoxColumn;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.TextBox DeleteID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
 
     }
 }
