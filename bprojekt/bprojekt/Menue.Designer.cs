@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menue));
             this.Buchungen = new System.Windows.Forms.Button();
             this.Fahrtenbuch = new System.Windows.Forms.Button();
             this.Anlagenverzeichnis = new System.Windows.Forms.Button();
@@ -65,10 +66,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.Anlagenverzeichnis);
             this.Controls.Add(this.Fahrtenbuch);
             this.Controls.Add(this.Buchungen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menue";
             this.Text = "Menü";
             this.ResumeLayout(false);
