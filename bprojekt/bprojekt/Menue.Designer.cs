@@ -70,20 +70,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
+            
             this.ClientSize = new System.Drawing.Size(379, 322);
             this.Controls.Add(this.Anlagenverzeichnis);
             this.Controls.Add(this.Fahrtenbuch);
             this.Controls.Add(this.Buchungen);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.Anlagenverzeichnis);
             this.Controls.Add(this.Fahrtenbuch);
             this.Controls.Add(this.Buchungen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
->>>>>>> origin/master
+
             this.Name = "Menue";
             this.Text = "Menü";
             this.ResumeLayout(false);
