@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dBSDataSet1 = new bprojekt.DBSDataSet1();
-            this.buchungenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buchungenTableAdapter = new bprojekt.DBSDataSet1TableAdapters.BuchungenTableAdapter();
             this.belegnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ustDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +37,13 @@
             this.ustSummeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eADatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buchungenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBSDataSet1 = new bprojekt.DBSDataSet1();
+            this.buchungenTableAdapter = new bprojekt.DBSDataSet1TableAdapters.BuchungenTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,25 +59,12 @@
             this.reDatumDataGridViewTextBoxColumn,
             this.eADatumDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.buchungenBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 10);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(759, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 184);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dBSDataSet1
-            // 
-            this.dBSDataSet1.DataSetName = "DBSDataSet1";
-            this.dBSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buchungenBindingSource
-            // 
-            this.buchungenBindingSource.DataMember = "Buchungen";
-            this.buchungenBindingSource.DataSource = this.dBSDataSet1;
-            // 
-            // buchungenTableAdapter
-            // 
-            this.buchungenTableAdapter.ClearBeforeFill = true;
             // 
             // belegnummerDataGridViewTextBoxColumn
             // 
@@ -120,18 +108,43 @@
             this.eADatumDataGridViewTextBoxColumn.HeaderText = "EA-Datum";
             this.eADatumDataGridViewTextBoxColumn.Name = "eADatumDataGridViewTextBoxColumn";
             // 
+            // buchungenBindingSource
+            // 
+            this.buchungenBindingSource.DataMember = "Buchungen";
+            this.buchungenBindingSource.DataSource = this.dBSDataSet1;
+            // 
+            // dBSDataSet1
+            // 
+            this.dBSDataSet1.DataSetName = "DBSDataSet1";
+            this.dBSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buchungenTableAdapter
+            // 
+            this.buchungenTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(141, 200);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(114, 21);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "Eing./Ausg.";
+            // 
             // Buchungen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 358);
+            this.ClientSize = new System.Drawing.Size(767, 291);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Buchungen";
             this.Text = "Buchungen";
             this.Load += new System.EventHandler(this.Buchungen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,5 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ustSummeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eADatumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

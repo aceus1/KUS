@@ -28,5 +28,10 @@ namespace bprojekt
             Buchungen a = new Buchungen();
             a.Show();
         }
+
+        private void Menue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

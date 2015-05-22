@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menue));
             this.Buchungen = new System.Windows.Forms.Button();
             this.Fahrtenbuch = new System.Windows.Forms.Button();
@@ -76,6 +78,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menue";
             this.Text = "Menü";
+            this.Load += new System.EventHandler(this.Menue_Load);
             this.ResumeLayout(false);
 
         }

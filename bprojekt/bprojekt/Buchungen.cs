@@ -21,7 +21,7 @@ namespace bprojekt
         {
             // TODO: This line of code loads data into the 'dBSDataSet1.Buchungen' table. You can move, or remove it, as needed.
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
-
+            comboBox1.Items.Add("Eingangsrechnung");
         }
     }
 }

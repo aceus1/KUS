@@ -66,3 +66,4 @@ C:\Users\aman\Documents\GitHub\KUS\bprojekt\bprojekt\obj\Debug\bprojekt.Register
 C:\Users\aman\Documents\GitHub\KUS\bprojekt\bprojekt\obj\Debug\bprojekt.csproj.GenerateResource.Cache
 C:\Users\aman\Documents\GitHub\KUS\bprojekt\bprojekt\bin\Debug\bprojekt.exe
 C:\Users\aman\Documents\GitHub\KUS\bprojekt\bprojekt\bin\Debug\bprojekt.pdb
+C:\Users\Chen\Documents\GitHub\KUS\bprojekt\bprojekt\obj\Debug\bprojekt.Buchungen.resources
