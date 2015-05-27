@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menue));
             this.Buchungen = new System.Windows.Forms.Button();
             this.Fahrtenbuch = new System.Windows.Forms.Button();
             this.Anlagenverzeichnis = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Buchungen
@@ -65,12 +64,23 @@
             this.Anlagenverzeichnis.Text = "Anlageverzeichnis";
             this.Anlagenverzeichnis.UseVisualStyleBackColor = true;
             // 
+            // logout
+            // 
+            this.logout.Location = new System.Drawing.Point(189, 192);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(75, 23);
+            this.logout.TabIndex = 3;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // Menue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(287, 241);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.Anlagenverzeichnis);
             this.Controls.Add(this.Fahrtenbuch);
             this.Controls.Add(this.Buchungen);
@@ -88,5 +98,6 @@
         private System.Windows.Forms.Button Buchungen;
         private System.Windows.Forms.Button Fahrtenbuch;
         private System.Windows.Forms.Button Anlagenverzeichnis;
+        private System.Windows.Forms.Button logout;
     }
 }
