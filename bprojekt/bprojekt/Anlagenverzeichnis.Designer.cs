@@ -46,9 +46,12 @@
             this.dauerbox = new System.Windows.Forms.TextBox();
             this.Prozentbox = new System.Windows.Forms.TextBox();
             this.AbangangBox = new System.Windows.Forms.TextBox();
-            this.anlagenverzeichnisbox = new System.Windows.Forms.TextBox();
             this.gegenstandbox = new System.Windows.Forms.TextBox();
             this.anschaffdatumbox = new System.Windows.Forms.TextBox();
+            this.savebuttonanlage = new System.Windows.Forms.Button();
+            this.deletebuttonanlage = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.deleteanlagenidbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
@@ -141,68 +144,107 @@
             // 
             // anschaffwertbox
             // 
-            this.anschaffwertbox.Location = new System.Drawing.Point(805, 234);
+            this.anschaffwertbox.Location = new System.Drawing.Point(607, 234);
             this.anschaffwertbox.Name = "anschaffwertbox";
-            this.anschaffwertbox.Size = new System.Drawing.Size(100, 22);
+            this.anschaffwertbox.Size = new System.Drawing.Size(169, 22);
             this.anschaffwertbox.TabIndex = 1;
+            this.anschaffwertbox.TextChanged += new System.EventHandler(this.anschaffwertbox_TextChanged);
             // 
             // Zugangbox
             // 
-            this.Zugangbox.Location = new System.Drawing.Point(911, 234);
+            this.Zugangbox.Location = new System.Drawing.Point(782, 234);
             this.Zugangbox.Name = "Zugangbox";
-            this.Zugangbox.Size = new System.Drawing.Size(100, 22);
+            this.Zugangbox.Size = new System.Drawing.Size(133, 22);
             this.Zugangbox.TabIndex = 2;
+            this.Zugangbox.TextChanged += new System.EventHandler(this.Zugangbox_TextChanged);
             // 
             // dauerbox
             // 
-            this.dauerbox.Location = new System.Drawing.Point(1017, 234);
+            this.dauerbox.Location = new System.Drawing.Point(921, 234);
             this.dauerbox.Name = "dauerbox";
-            this.dauerbox.Size = new System.Drawing.Size(100, 22);
+            this.dauerbox.Size = new System.Drawing.Size(133, 22);
             this.dauerbox.TabIndex = 3;
+            this.dauerbox.TextChanged += new System.EventHandler(this.dauerbox_TextChanged);
             // 
             // Prozentbox
             // 
-            this.Prozentbox.Location = new System.Drawing.Point(1123, 234);
+            this.Prozentbox.Location = new System.Drawing.Point(1060, 234);
             this.Prozentbox.Name = "Prozentbox";
-            this.Prozentbox.Size = new System.Drawing.Size(100, 22);
+            this.Prozentbox.Size = new System.Drawing.Size(133, 22);
             this.Prozentbox.TabIndex = 4;
+            this.Prozentbox.TextChanged += new System.EventHandler(this.Prozentbox_TextChanged);
             // 
             // AbangangBox
             // 
-            this.AbangangBox.Location = new System.Drawing.Point(1229, 234);
+            this.AbangangBox.Location = new System.Drawing.Point(1199, 234);
             this.AbangangBox.Name = "AbangangBox";
-            this.AbangangBox.Size = new System.Drawing.Size(100, 22);
+            this.AbangangBox.Size = new System.Drawing.Size(133, 22);
             this.AbangangBox.TabIndex = 5;
-            // 
-            // anlagenverzeichnisbox
-            // 
-            this.anlagenverzeichnisbox.Location = new System.Drawing.Point(487, 234);
-            this.anlagenverzeichnisbox.Name = "anlagenverzeichnisbox";
-            this.anlagenverzeichnisbox.Size = new System.Drawing.Size(100, 22);
-            this.anlagenverzeichnisbox.TabIndex = 6;
+            this.AbangangBox.TextChanged += new System.EventHandler(this.AbangangBox_TextChanged);
             // 
             // gegenstandbox
             // 
-            this.gegenstandbox.Location = new System.Drawing.Point(593, 234);
+            this.gegenstandbox.Location = new System.Drawing.Point(272, 234);
             this.gegenstandbox.Name = "gegenstandbox";
-            this.gegenstandbox.Size = new System.Drawing.Size(100, 22);
+            this.gegenstandbox.Size = new System.Drawing.Size(128, 22);
             this.gegenstandbox.TabIndex = 7;
+            this.gegenstandbox.TextChanged += new System.EventHandler(this.gegenstandbox_TextChanged);
             // 
             // anschaffdatumbox
             // 
-            this.anschaffdatumbox.Location = new System.Drawing.Point(699, 234);
+            this.anschaffdatumbox.Location = new System.Drawing.Point(406, 234);
             this.anschaffdatumbox.Name = "anschaffdatumbox";
-            this.anschaffdatumbox.Size = new System.Drawing.Size(100, 22);
+            this.anschaffdatumbox.Size = new System.Drawing.Size(195, 22);
             this.anschaffdatumbox.TabIndex = 8;
+            this.anschaffdatumbox.TextChanged += new System.EventHandler(this.anschaffdatumbox_TextChanged);
+            // 
+            // savebuttonanlage
+            // 
+            this.savebuttonanlage.Location = new System.Drawing.Point(12, 234);
+            this.savebuttonanlage.Name = "savebuttonanlage";
+            this.savebuttonanlage.Size = new System.Drawing.Size(187, 67);
+            this.savebuttonanlage.TabIndex = 10;
+            this.savebuttonanlage.Text = "Speichern";
+            this.savebuttonanlage.UseVisualStyleBackColor = true;
+            this.savebuttonanlage.Click += new System.EventHandler(this.savebuttonanlage_Click);
+            // 
+            // deletebuttonanlage
+            // 
+            this.deletebuttonanlage.Location = new System.Drawing.Point(159, 394);
+            this.deletebuttonanlage.Name = "deletebuttonanlage";
+            this.deletebuttonanlage.Size = new System.Drawing.Size(78, 27);
+            this.deletebuttonanlage.TabIndex = 11;
+            this.deletebuttonanlage.Text = "Löschen";
+            this.deletebuttonanlage.UseVisualStyleBackColor = true;
+            this.deletebuttonanlage.Click += new System.EventHandler(this.deletebuttonanlage_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 376);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "AnlagenverzeichnisID";
+            // 
+            // deleteanlagenidbox
+            // 
+            this.deleteanlagenidbox.Location = new System.Drawing.Point(12, 396);
+            this.deleteanlagenidbox.Name = "deleteanlagenidbox";
+            this.deleteanlagenidbox.Size = new System.Drawing.Size(141, 22);
+            this.deleteanlagenidbox.TabIndex = 13;
             // 
             // Anlagenverzeichnis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 426);
+            this.Controls.Add(this.deleteanlagenidbox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.deletebuttonanlage);
+            this.Controls.Add(this.savebuttonanlage);
             this.Controls.Add(this.anschaffdatumbox);
             this.Controls.Add(this.gegenstandbox);
-            this.Controls.Add(this.anlagenverzeichnisbox);
             this.Controls.Add(this.AbangangBox);
             this.Controls.Add(this.Prozentbox);
             this.Controls.Add(this.dauerbox);
@@ -239,8 +281,11 @@
         private System.Windows.Forms.TextBox dauerbox;
         private System.Windows.Forms.TextBox Prozentbox;
         private System.Windows.Forms.TextBox AbangangBox;
-        private System.Windows.Forms.TextBox anlagenverzeichnisbox;
         private System.Windows.Forms.TextBox gegenstandbox;
         private System.Windows.Forms.TextBox anschaffdatumbox;
+        private System.Windows.Forms.Button savebuttonanlage;
+        private System.Windows.Forms.Button deletebuttonanlage;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox deleteanlagenidbox;
     }
 }

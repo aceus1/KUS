@@ -29,5 +29,54 @@ namespace bprojekt
             this.anlagenverzeichnisTableAdapter.Fill(this.dBSDataSet1.Anlagenverzeichnis);
 
         }
+        #region Save&Delete Button
+        private void savebuttonanlage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deletebuttonanlage_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        //TODO: Datenbank einlesen / auslesen / speichern / löschen
+        #region TextChanged Events
+        private void gegenstandbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void anschaffdatumbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void anschaffwertbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Zugangbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dauerbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Prozentbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AbangangBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        //TODO: Überprüfen ob etwas in den Boxen steht
     }
 }
