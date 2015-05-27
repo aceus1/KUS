@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace bprojekt
 {
-    public partial class Buchungen : Form
+    internal partial class Buchungen : Form
     {
         Rang r;
         public Buchungen(Rang a)
         {
             r = a;
+            InitializeComponent();
         }
         public Buchungen()
         {
@@ -31,6 +32,10 @@ namespace bprojekt
             comboBox2.Items.Add("0%");
             comboBox2.Items.Add("10%");
             comboBox2.Items.Add("20%");
+            if (!r.rangcheck())
+            {
+                
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
