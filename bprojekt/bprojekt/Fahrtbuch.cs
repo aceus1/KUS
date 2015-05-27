@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace bprojekt
 {
-    public partial class Fahrtbuch : Form
+    internal partial class Fahrtbuch : Form
     {
         Rang r;
         public Fahrtbuch(Rang a)
         {
             r = a;
+            InitializeComponent();
         }
         public Fahrtbuch()
         {
@@ -37,9 +38,11 @@ namespace bprojekt
             zielortr = false;
             akmstr = false;
             ekmstr = false;
-            if (true)
+            if (!r.rangcheck())
             {
-                
+                label1.Visible = false;
+                DeleteID.Visible = false;
+                button1.Visible = false;
             }
         }
 
