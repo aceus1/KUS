@@ -50,5 +50,13 @@ namespace bprojekt
             
 
         }
+
+        private void Anlagenverzeichnis_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Anlagenverzeichnis angv = new Anlagenverzeichnis();
+            angv.ShowDialog();
+            this.Close();
+        }
     }
 }

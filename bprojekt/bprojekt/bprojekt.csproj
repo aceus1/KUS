@@ -91,6 +91,9 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Verwaltung.cs" />
+    <EmbeddedResource Include="Anlagenverzeichnis.resx">
+      <DependentUpon>Anlagenverzeichnis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buchungen.resx">
       <DependentUpon>Buchungen.cs</DependentUpon>
     </EmbeddedResource>
