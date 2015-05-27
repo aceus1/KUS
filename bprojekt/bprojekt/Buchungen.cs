@@ -12,6 +12,11 @@ namespace bprojekt
 {
     public partial class Buchungen : Form
     {
+        Rang r;
+        public Buchungen(Rang a)
+        {
+            r = a;
+        }
         public Buchungen()
         {
             InitializeComponent();
