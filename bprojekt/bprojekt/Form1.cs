@@ -53,7 +53,8 @@ namespace bprojekt
                 if (username.Text == u.Value.Uname&&password.Text==u.Value.Upass)
                 {
                     this.Hide();
-                    Menue menue = new Menue();
+                    Rang r = new Rang(u.Value.Urang);
+                    Menue menue = new Menue(r);
                     menue.ShowDialog();
                     this.Close();
                 }

@@ -12,6 +12,12 @@ namespace bprojekt
 {
     public partial class Menue : Form
     {
+        Rang r;
+        public Menue(Rang a)
+        {
+            r = a;
+        
+        }
         public Menue()
         {
             InitializeComponent();
@@ -19,13 +25,13 @@ namespace bprojekt
 
         private void Fahrtenbuch_Click(object sender, EventArgs e)
         {
-            Fahrtbuch fahrtenbuch = new Fahrtbuch();
+            Fahrtbuch fahrtenbuch = new Fahrtbuch( r);
             fahrtenbuch.Show();
         }
 
         private void Buchungen_Click(object sender, EventArgs e)
         {
-            Buchungen a = new Buchungen();
+            Buchungen a = new Buchungen(r);
             a.Show();
         }
 

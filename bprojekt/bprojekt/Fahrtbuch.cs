@@ -13,6 +13,11 @@ namespace bprojekt
 {
     public partial class Fahrtbuch : Form
     {
+        Rang r;
+        public Fahrtbuch(Rang a)
+        {
+            r = a;
+        }
         public Fahrtbuch()
         {
             InitializeComponent();
@@ -32,6 +37,10 @@ namespace bprojekt
             zielortr = false;
             akmstr = false;
             ekmstr = false;
+            if (true)
+            {
+                
+            }
         }
 
         private void savebutton_Click(object sender, EventArgs e)
