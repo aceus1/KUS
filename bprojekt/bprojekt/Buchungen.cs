@@ -19,6 +19,12 @@ namespace bprojekt
 
         private void Buchungen_Load(object sender, EventArgs e)
         {
+            comboBox1.BackColor = Color.Red;
+            comboBox2.BackColor = Color.Red;
+            Wert.BackColor = Color.Red;
+            Ust_Summe.BackColor = Color.Red;
+            EA_Datum.BackColor = Color.Red;
+            Re_Datum.BackColor = Color.Red;
             // TODO: This line of code loads data into the 'dBSDataSet1.Buchungen' table. You can move, or remove it, as needed.
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
             comboBox1.Items.Add("Eingangsrechnung");
@@ -30,7 +36,7 @@ namespace bprojekt
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Ust_TextChanged(object sender, EventArgs e)
@@ -47,10 +53,79 @@ namespace bprojekt
         {
 
         }
+        private bool eadatum = false;
+        private bool redatum = false; 
+
 
         private void EA_Datum_TextChanged(object sender, EventArgs e)
         {
+            #region DatumTesten
+            if (EA_Datum.Text.Length == 10) //Überprüft ob in der Textbox der Text genau 10 Zeichen lang ist
+            {
+                if (EA_Datum.Text.Contains(".") == true)
+                /*Überprüft ob das Datum überhaupt einen Punkt enthält*/
+                {
+                    try
+                    {
+                        DateTime.Parse(EA_Datum.Text);
+                        EA_Datum.BackColor = Color.Green;
+                        eadatum = true;
+                    }
+                    catch (Exception)
+                    {
+                        EA_Datum.BackColor = Color.Red;
+                        eadatum = false;
+                    }
+                }
+                else
+                {
+                    EA_Datum.BackColor = Color.Red;
+                    eadatum = false;
+                }
+            }
+            else
+            {
+                EA_Datum.BackColor = Color.Red;
+                eadatum = false;
+            }
 
+            #endregion
+        }
+        
+        private void Re_Datum_TextChanged(object sender, EventArgs e)
+        {
+            #region DatumTesten
+            if (Re_Datum.Text.Length == 10) //Überprüft ob in der Textbox der Text genau 10 Zeichen lang ist
+            {
+                if (Re_Datum.Text.Contains(".") == true)
+                /*Überprüft ob das Datum überhaupt einen Punkt enthält*/
+                {
+                    try
+                    {
+                        DateTime.Parse(Re_Datum.Text);
+                        Re_Datum.BackColor = Color.Green;
+                        redatum = true;
+                    }
+                    catch (Exception)
+                    {
+                        Re_Datum.BackColor = Color.Red;
+                        redatum = false;
+                    }
+                }
+                else
+                {
+                    Re_Datum.BackColor = Color.Red;
+                    redatum = false;
+                }
+            }
+            else
+            {
+                Re_Datum.BackColor = Color.Red;
+                redatum = false;
+            }
+
+            #endregion
+            
         }
     }
 }
