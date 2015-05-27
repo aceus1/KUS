@@ -23,9 +23,32 @@ namespace bprojekt
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
             comboBox1.Items.Add("Eingangsrechnung");
             comboBox1.Items.Add("Ausgangsrechnung");
+            comboBox2.Items.Add("0%");
+            comboBox2.Items.Add("10%");
+            comboBox2.Items.Add("20%");
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ust_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EA_Datum_TextChanged(object sender, EventArgs e)
         {
 
         }

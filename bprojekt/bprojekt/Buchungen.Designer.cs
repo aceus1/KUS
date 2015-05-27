@@ -41,11 +41,11 @@
             this.dBSDataSet1 = new bprojekt.DBSDataSet1();
             this.buchungenTableAdapter = new bprojekt.DBSDataSet1TableAdapters.BuchungenTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Ust = new System.Windows.Forms.TextBox();
             this.Wert = new System.Windows.Forms.TextBox();
             this.Ust_Summe = new System.Windows.Forms.TextBox();
             this.Re_Datum = new System.Windows.Forms.TextBox();
             this.EA_Datum = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
@@ -135,14 +135,7 @@
             this.comboBox1.Size = new System.Drawing.Size(102, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Eing./Ausg.";
-            // 
-            // Ust
-            // 
-            this.Ust.Location = new System.Drawing.Point(243, 200);
-            this.Ust.Name = "Ust";
-            this.Ust.Size = new System.Drawing.Size(100, 20);
-            this.Ust.TabIndex = 2;
-            this.Ust.Text = "in Prozent!";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Wert
             // 
@@ -150,6 +143,7 @@
             this.Wert.Name = "Wert";
             this.Wert.Size = new System.Drawing.Size(100, 20);
             this.Wert.TabIndex = 3;
+            this.Wert.Text = "Wert";
             // 
             // Ust_Summe
             // 
@@ -157,6 +151,7 @@
             this.Ust_Summe.Name = "Ust_Summe";
             this.Ust_Summe.Size = new System.Drawing.Size(100, 20);
             this.Ust_Summe.TabIndex = 4;
+            this.Ust_Summe.Text = "USt Summe";
             this.Ust_Summe.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // Re_Datum
@@ -165,6 +160,7 @@
             this.Re_Datum.Name = "Re_Datum";
             this.Re_Datum.Size = new System.Drawing.Size(100, 20);
             this.Re_Datum.TabIndex = 5;
+            this.Re_Datum.Text = "Re-Datum";
             // 
             // EA_Datum
             // 
@@ -172,17 +168,29 @@
             this.EA_Datum.Name = "EA_Datum";
             this.EA_Datum.Size = new System.Drawing.Size(100, 20);
             this.EA_Datum.TabIndex = 6;
+            this.EA_Datum.Text = "EA-Datum";
+            this.EA_Datum.TextChanged += new System.EventHandler(this.EA_Datum_TextChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(238, 199);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox2.TabIndex = 7;
+            this.comboBox2.Text = "Ust";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Buchungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 291);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.EA_Datum);
             this.Controls.Add(this.Re_Datum);
             this.Controls.Add(this.Ust_Summe);
             this.Controls.Add(this.Wert);
-            this.Controls.Add(this.Ust);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -211,10 +219,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eADatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox Ust;
         private System.Windows.Forms.TextBox Wert;
         private System.Windows.Forms.TextBox Ust_Summe;
         private System.Windows.Forms.TextBox Re_Datum;
         private System.Windows.Forms.TextBox EA_Datum;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
