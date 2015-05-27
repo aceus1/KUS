@@ -28,5 +28,21 @@ namespace bprojekt
             Buchungen a = new Buchungen();
             a.Show();
         }
+
+        private void Menue_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+            this.Close();
+            
+            
+
+        }
     }
 }
