@@ -234,6 +234,7 @@
             this.deleteanlagenidbox.Name = "deleteanlagenidbox";
             this.deleteanlagenidbox.Size = new System.Drawing.Size(141, 22);
             this.deleteanlagenidbox.TabIndex = 13;
+            this.deleteanlagenidbox.TextChanged += new System.EventHandler(this.deleteanlagenidbox_TextChanged);
             // 
             // Anlagenverzeichnis
             // 

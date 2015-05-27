@@ -55,7 +55,7 @@ namespace bprojekt
                         cmd = new OleDbCommand(cmdstr, conn);
                         cmd.ExecuteNonQuery();
                         conn.Close();
-                        Fahrtbuch a = new Fahrtbuch();
+                        Anlagenverzeichnis a = new Anlagenverzeichnis();
                         this.Close();
                         a.Show();
                     }
@@ -69,7 +69,28 @@ namespace bprojekt
 
         private void deletebuttonanlage_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (delr == true)
+                {
+                    string cmdstr = "DELETE FROM Anlagenverzeichnis WHERE AnlagenverzeichnisID = " + deleteanlagenidbox.Text;
+                    OleDbCommand cmd;
+                    OleDbConnection conn;
+                    conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                    conn.Open();
+                    cmd = new OleDbCommand(cmdstr, conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    dataGridView1.Update();
+                    Anlagenverzeichnis a = new Anlagenverzeichnis();
+                    this.Close();
+                    a.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         #endregion
         //TODO: Datenbank einlesen / auslesen / speichern / löschen
@@ -81,6 +102,7 @@ namespace bprojekt
         private bool dauerboxr = false;
         private bool abgangboxr = false;
         private bool prozentboxr = false;
+        private bool delr = false;
         private bool textboxentrue()
         {
             if (gegenstandboxr == true && anschaffdatumboxr == true && anschaffdatumboxr == true && zugangboxr == true && dauerboxr == true && abgangboxr == true && prozentboxr == true)
@@ -223,6 +245,29 @@ namespace bprojekt
             }
         }
         #endregion
+
+        private void deleteanlagenidbox_TextChanged(object sender, EventArgs e)
+        {
+            if (deleteanlagenidbox.Text == "")
+            {
+                deleteanlagenidbox.BackColor = Color.Red;
+                delr = false;
+            }
+            else
+            {
+                try
+                {
+                    int.Parse(deleteanlagenidbox.Text);
+                    deleteanlagenidbox.BackColor = Color.Green;
+                    delr = true;
+                }
+                catch 
+                {
+                    deleteanlagenidbox.BackColor = Color.Red;
+                    delr = false;
+                }
+            }
+        }
         //TODO: Überprüfen ob etwas in den Boxen steht
     }
 }
