@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace bprojekt
 {
@@ -39,7 +40,31 @@ namespace bprojekt
         #region Save&Delete Button
         private void savebuttonanlage_Click(object sender, EventArgs e)
         {
-
+            if (textboxentrue())
+            {
+                try
+                {
+                    OleDbCommand cmd;
+                    OleDbConnection conn;
+                    string cmdstr;
+                    conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                    if (textboxentrue())
+                    {
+                        conn.Open();
+                        cmdstr = "INSERT INTO Anlagenverzeichnis (Gegenstand, Anschaffungsdatum, Anschaffungswert, Zugang, Dauer, Prozent, Abgang) VALUES ('" + gegenstandbox.Text + "','" + anschaffdatumbox.Text + "'," + anschaffwertbox.Text + "," + Zugangbox.Text + "," + dauerbox.Text + "," + Prozentbox.Text + "," + AbgangBox.Text +")";
+                        cmd = new OleDbCommand(cmdstr, conn);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Fahrtbuch a = new Fahrtbuch();
+                        this.Close();
+                        a.Show();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
         }
 
         private void deletebuttonanlage_Click(object sender, EventArgs e)

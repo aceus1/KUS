@@ -172,6 +172,7 @@
             this.Prozentbox.Name = "Prozentbox";
             this.Prozentbox.Size = new System.Drawing.Size(133, 22);
             this.Prozentbox.TabIndex = 4;
+            this.Prozentbox.Text = "-";
             this.Prozentbox.TextChanged += new System.EventHandler(this.Prozentbox_TextChanged);
             // 
             // AbgangBox
