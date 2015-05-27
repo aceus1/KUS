@@ -13,11 +13,15 @@ namespace bprojekt
     internal partial class Buchungen : Form
     {
         Rang r;
+<<<<<<< HEAD
+        
+=======
         public Buchungen(Rang a)
         {
             r = a;
             InitializeComponent();
         }
+>>>>>>> origin/master
         public Buchungen()
         {
             InitializeComponent();
@@ -46,7 +50,8 @@ namespace bprojekt
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-           
+            double a=double.Parse(Wert.Text)/double.Parse(comboBox2.Text);
+            Ust_Summe.Text =Convert.ToString(a * 100);
         }
 
         private void Ust_TextChanged(object sender, EventArgs e)
