@@ -13,10 +13,7 @@ namespace bprojekt
     public partial class Buchungen : Form
     {
         Rang r;
-        public Buchungen(Rang a)
-        {
-            r = a;
-        }
+        
         public Buchungen()
         {
             InitializeComponent();
@@ -41,7 +38,8 @@ namespace bprojekt
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-           
+            double a=double.Parse(Wert.Text)/double.Parse(comboBox2.Text);
+            Ust_Summe.Text =Convert.ToString(a * 100);
         }
 
         private void Ust_TextChanged(object sender, EventArgs e)
