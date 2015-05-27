@@ -130,15 +130,15 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 201);
+            this.comboBox1.Location = new System.Drawing.Point(135, 199);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 21);
+            this.comboBox1.Size = new System.Drawing.Size(102, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Eing./Ausg.";
             // 
             // Ust
             // 
-            this.Ust.Location = new System.Drawing.Point(249, 202);
+            this.Ust.Location = new System.Drawing.Point(243, 200);
             this.Ust.Name = "Ust";
             this.Ust.Size = new System.Drawing.Size(100, 20);
             this.Ust.TabIndex = 2;
@@ -146,14 +146,14 @@
             // 
             // Wert
             // 
-            this.Wert.Location = new System.Drawing.Point(349, 202);
+            this.Wert.Location = new System.Drawing.Point(344, 200);
             this.Wert.Name = "Wert";
             this.Wert.Size = new System.Drawing.Size(100, 20);
             this.Wert.TabIndex = 3;
             // 
             // Ust_Summe
             // 
-            this.Ust_Summe.Location = new System.Drawing.Point(450, 203);
+            this.Ust_Summe.Location = new System.Drawing.Point(445, 200);
             this.Ust_Summe.Name = "Ust_Summe";
             this.Ust_Summe.Size = new System.Drawing.Size(100, 20);
             this.Ust_Summe.TabIndex = 4;
@@ -161,14 +161,14 @@
             // 
             // Re_Datum
             // 
-            this.Re_Datum.Location = new System.Drawing.Point(551, 203);
+            this.Re_Datum.Location = new System.Drawing.Point(546, 200);
             this.Re_Datum.Name = "Re_Datum";
             this.Re_Datum.Size = new System.Drawing.Size(100, 20);
             this.Re_Datum.TabIndex = 5;
             // 
             // EA_Datum
             // 
-            this.EA_Datum.Location = new System.Drawing.Point(652, 204);
+            this.EA_Datum.Location = new System.Drawing.Point(647, 200);
             this.EA_Datum.Name = "EA_Datum";
             this.EA_Datum.Size = new System.Drawing.Size(100, 20);
             this.EA_Datum.TabIndex = 6;
