@@ -45,7 +45,7 @@
             this.Zugangbox = new System.Windows.Forms.TextBox();
             this.dauerbox = new System.Windows.Forms.TextBox();
             this.Prozentbox = new System.Windows.Forms.TextBox();
-            this.AbangangBox = new System.Windows.Forms.TextBox();
+            this.AbgangBox = new System.Windows.Forms.TextBox();
             this.gegenstandbox = new System.Windows.Forms.TextBox();
             this.anschaffdatumbox = new System.Windows.Forms.TextBox();
             this.savebuttonanlage = new System.Windows.Forms.Button();
@@ -174,13 +174,13 @@
             this.Prozentbox.TabIndex = 4;
             this.Prozentbox.TextChanged += new System.EventHandler(this.Prozentbox_TextChanged);
             // 
-            // AbangangBox
+            // AbgangBox
             // 
-            this.AbangangBox.Location = new System.Drawing.Point(1199, 234);
-            this.AbangangBox.Name = "AbangangBox";
-            this.AbangangBox.Size = new System.Drawing.Size(133, 22);
-            this.AbangangBox.TabIndex = 5;
-            this.AbangangBox.TextChanged += new System.EventHandler(this.AbangangBox_TextChanged);
+            this.AbgangBox.Location = new System.Drawing.Point(1199, 234);
+            this.AbgangBox.Name = "AbgangBox";
+            this.AbgangBox.Size = new System.Drawing.Size(133, 22);
+            this.AbgangBox.TabIndex = 5;
+            this.AbgangBox.TextChanged += new System.EventHandler(this.AbangangBox_TextChanged);
             // 
             // gegenstandbox
             // 
@@ -245,7 +245,7 @@
             this.Controls.Add(this.savebuttonanlage);
             this.Controls.Add(this.anschaffdatumbox);
             this.Controls.Add(this.gegenstandbox);
-            this.Controls.Add(this.AbangangBox);
+            this.Controls.Add(this.AbgangBox);
             this.Controls.Add(this.Prozentbox);
             this.Controls.Add(this.dauerbox);
             this.Controls.Add(this.Zugangbox);
@@ -280,12 +280,12 @@
         private System.Windows.Forms.TextBox Zugangbox;
         private System.Windows.Forms.TextBox dauerbox;
         private System.Windows.Forms.TextBox Prozentbox;
-        private System.Windows.Forms.TextBox AbangangBox;
         private System.Windows.Forms.TextBox gegenstandbox;
         private System.Windows.Forms.TextBox anschaffdatumbox;
         private System.Windows.Forms.Button savebuttonanlage;
         private System.Windows.Forms.Button deletebuttonanlage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox deleteanlagenidbox;
+        private System.Windows.Forms.TextBox AbgangBox;
     }
 }
