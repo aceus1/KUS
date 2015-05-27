@@ -161,6 +161,7 @@
             this.Re_Datum.Size = new System.Drawing.Size(100, 20);
             this.Re_Datum.TabIndex = 5;
             this.Re_Datum.Text = "Re-Datum";
+            this.Re_Datum.TextChanged += new System.EventHandler(this.Re_Datum_TextChanged);
             // 
             // EA_Datum
             // 
