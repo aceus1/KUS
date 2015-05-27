@@ -41,11 +41,14 @@
             this.anlagenverzeichnisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSDataSet1 = new bprojekt.DBSDataSet1();
             this.anlagenverzeichnisTableAdapter = new bprojekt.DBSDataSet1TableAdapters.AnlagenverzeichnisTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.anschaffwertbox = new System.Windows.Forms.TextBox();
+            this.Zugangbox = new System.Windows.Forms.TextBox();
+            this.dauerbox = new System.Windows.Forms.TextBox();
+            this.Prozentbox = new System.Windows.Forms.TextBox();
+            this.AbangangBox = new System.Windows.Forms.TextBox();
+            this.anlagenverzeichnisbox = new System.Windows.Forms.TextBox();
+            this.gegenstandbox = new System.Windows.Forms.TextBox();
+            this.anschaffdatumbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
@@ -136,51 +139,75 @@
             // 
             this.anlagenverzeichnisTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
+            // anschaffwertbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(805, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
+            this.anschaffwertbox.Location = new System.Drawing.Point(805, 234);
+            this.anschaffwertbox.Name = "anschaffwertbox";
+            this.anschaffwertbox.Size = new System.Drawing.Size(100, 22);
+            this.anschaffwertbox.TabIndex = 1;
             // 
-            // textBox2
+            // Zugangbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(911, 234);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 2;
+            this.Zugangbox.Location = new System.Drawing.Point(911, 234);
+            this.Zugangbox.Name = "Zugangbox";
+            this.Zugangbox.Size = new System.Drawing.Size(100, 22);
+            this.Zugangbox.TabIndex = 2;
             // 
-            // textBox3
+            // dauerbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(1017, 234);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 3;
+            this.dauerbox.Location = new System.Drawing.Point(1017, 234);
+            this.dauerbox.Name = "dauerbox";
+            this.dauerbox.Size = new System.Drawing.Size(100, 22);
+            this.dauerbox.TabIndex = 3;
             // 
-            // textBox4
+            // Prozentbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(1123, 234);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 4;
+            this.Prozentbox.Location = new System.Drawing.Point(1123, 234);
+            this.Prozentbox.Name = "Prozentbox";
+            this.Prozentbox.Size = new System.Drawing.Size(100, 22);
+            this.Prozentbox.TabIndex = 4;
             // 
-            // textBox5
+            // AbangangBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(1229, 234);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 5;
+            this.AbangangBox.Location = new System.Drawing.Point(1229, 234);
+            this.AbangangBox.Name = "AbangangBox";
+            this.AbangangBox.Size = new System.Drawing.Size(100, 22);
+            this.AbangangBox.TabIndex = 5;
+            // 
+            // anlagenverzeichnisbox
+            // 
+            this.anlagenverzeichnisbox.Location = new System.Drawing.Point(487, 234);
+            this.anlagenverzeichnisbox.Name = "anlagenverzeichnisbox";
+            this.anlagenverzeichnisbox.Size = new System.Drawing.Size(100, 22);
+            this.anlagenverzeichnisbox.TabIndex = 6;
+            // 
+            // gegenstandbox
+            // 
+            this.gegenstandbox.Location = new System.Drawing.Point(593, 234);
+            this.gegenstandbox.Name = "gegenstandbox";
+            this.gegenstandbox.Size = new System.Drawing.Size(100, 22);
+            this.gegenstandbox.TabIndex = 7;
+            // 
+            // anschaffdatumbox
+            // 
+            this.anschaffdatumbox.Location = new System.Drawing.Point(699, 234);
+            this.anschaffdatumbox.Name = "anschaffdatumbox";
+            this.anschaffdatumbox.Size = new System.Drawing.Size(100, 22);
+            this.anschaffdatumbox.TabIndex = 8;
             // 
             // Anlagenverzeichnis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 426);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.anschaffdatumbox);
+            this.Controls.Add(this.gegenstandbox);
+            this.Controls.Add(this.anlagenverzeichnisbox);
+            this.Controls.Add(this.AbangangBox);
+            this.Controls.Add(this.Prozentbox);
+            this.Controls.Add(this.dauerbox);
+            this.Controls.Add(this.Zugangbox);
+            this.Controls.Add(this.anschaffwertbox);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Anlagenverzeichnis";
             this.Text = "Anlagenverzeichnis";
@@ -207,10 +234,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dauerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prozentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abgangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox anschaffwertbox;
+        private System.Windows.Forms.TextBox Zugangbox;
+        private System.Windows.Forms.TextBox dauerbox;
+        private System.Windows.Forms.TextBox Prozentbox;
+        private System.Windows.Forms.TextBox AbangangBox;
+        private System.Windows.Forms.TextBox anlagenverzeichnisbox;
+        private System.Windows.Forms.TextBox gegenstandbox;
+        private System.Windows.Forms.TextBox anschaffdatumbox;
     }
 }
