@@ -148,11 +148,13 @@
             this.Wert.Size = new System.Drawing.Size(100, 20);
             this.Wert.TabIndex = 3;
             this.Wert.Text = "Wert";
+            this.Wert.TextChanged += new System.EventHandler(this.Wert_TextChanged);
             // 
             // Ust_Summe
             // 
             this.Ust_Summe.Location = new System.Drawing.Point(445, 200);
             this.Ust_Summe.Name = "Ust_Summe";
+            this.Ust_Summe.ReadOnly = true;
             this.Ust_Summe.Size = new System.Drawing.Size(100, 20);
             this.Ust_Summe.TabIndex = 4;
             this.Ust_Summe.Text = "USt Summe";

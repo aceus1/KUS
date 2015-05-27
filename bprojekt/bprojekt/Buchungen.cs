@@ -13,15 +13,11 @@ namespace bprojekt
     internal partial class Buchungen : Form
     {
         Rang r;
-<<<<<<< HEAD
-        
-=======
         public Buchungen(Rang a)
         {
             r = a;
             InitializeComponent();
         }
->>>>>>> origin/master
         public Buchungen()
         {
             InitializeComponent();
@@ -39,9 +35,9 @@ namespace bprojekt
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
             comboBox1.Items.Add("Eingangsrechnung");
             comboBox1.Items.Add("Ausgangsrechnung");
-            comboBox2.Items.Add("0%");
-            comboBox2.Items.Add("10%");
-            comboBox2.Items.Add("20%");
+            comboBox2.Items.Add("0");
+            comboBox2.Items.Add("10");
+            comboBox2.Items.Add("20");
             if (!r.rangcheck())
             {
                 
@@ -141,6 +137,17 @@ namespace bprojekt
 
             #endregion
             
+        }
+
+        private void Wert_TextChanged(object sender, EventArgs e)
+        {
+            //if (comboBox2.Text != "Ust"&&comboBox2.Text!=" "&&Wert.Text!="0")
+            //{
+            //    if (zahl(Wert.Text, Wert.Text.Length))
+            //    {
+            //        Ust_Summe.Text = Convert.ToString(Convert.ToDouble(Wert.Text) * (Convert.ToDouble(comboBox2.Text) / 100));
+            //    }
+            //}
         }
     }
 }
