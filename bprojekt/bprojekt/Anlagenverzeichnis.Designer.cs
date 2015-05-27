@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dBSDataSet1 = new bprojekt.DBSDataSet1();
-            this.anlagenverzeichnisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.anlagenverzeichnisTableAdapter = new bprojekt.DBSDataSet1TableAdapters.AnlagenverzeichnisTableAdapter();
             this.anlagenverzeichnisIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gegenstandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anschaffungsdatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +38,12 @@
             this.dauerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prozentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abgangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anlagenverzeichnisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBSDataSet1 = new bprojekt.DBSDataSet1();
+            this.anlagenverzeichnisTableAdapter = new bprojekt.DBSDataSet1TableAdapters.AnlagenverzeichnisTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,28 +63,15 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 216);
+            this.dataGridView1.Size = new System.Drawing.Size(1318, 216);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dBSDataSet1
-            // 
-            this.dBSDataSet1.DataSetName = "DBSDataSet1";
-            this.dBSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // anlagenverzeichnisBindingSource
-            // 
-            this.anlagenverzeichnisBindingSource.DataMember = "Anlagenverzeichnis";
-            this.anlagenverzeichnisBindingSource.DataSource = this.dBSDataSet1;
-            // 
-            // anlagenverzeichnisTableAdapter
-            // 
-            this.anlagenverzeichnisTableAdapter.ClearBeforeFill = true;
             // 
             // anlagenverzeichnisIDDataGridViewTextBoxColumn
             // 
             this.anlagenverzeichnisIDDataGridViewTextBoxColumn.DataPropertyName = "AnlagenverzeichnisID";
             this.anlagenverzeichnisIDDataGridViewTextBoxColumn.HeaderText = "AnlagenverzeichnisID";
             this.anlagenverzeichnisIDDataGridViewTextBoxColumn.Name = "anlagenverzeichnisIDDataGridViewTextBoxColumn";
+            this.anlagenverzeichnisIDDataGridViewTextBoxColumn.Width = 150;
             // 
             // gegenstandDataGridViewTextBoxColumn
             // 
@@ -97,12 +84,14 @@
             this.anschaffungsdatumDataGridViewTextBoxColumn.DataPropertyName = "Anschaffungsdatum";
             this.anschaffungsdatumDataGridViewTextBoxColumn.HeaderText = "Anschaffungsdatum";
             this.anschaffungsdatumDataGridViewTextBoxColumn.Name = "anschaffungsdatumDataGridViewTextBoxColumn";
+            this.anschaffungsdatumDataGridViewTextBoxColumn.Width = 150;
             // 
             // anschaffungswertDataGridViewTextBoxColumn
             // 
             this.anschaffungswertDataGridViewTextBoxColumn.DataPropertyName = "Anschaffungswert";
             this.anschaffungswertDataGridViewTextBoxColumn.HeaderText = "Anschaffungswert";
             this.anschaffungswertDataGridViewTextBoxColumn.Name = "anschaffungswertDataGridViewTextBoxColumn";
+            this.anschaffungswertDataGridViewTextBoxColumn.Width = 135;
             // 
             // zugangDataGridViewTextBoxColumn
             // 
@@ -128,18 +117,32 @@
             this.abgangDataGridViewTextBoxColumn.HeaderText = "Abgang";
             this.abgangDataGridViewTextBoxColumn.Name = "abgangDataGridViewTextBoxColumn";
             // 
+            // anlagenverzeichnisBindingSource
+            // 
+            this.anlagenverzeichnisBindingSource.DataMember = "Anlagenverzeichnis";
+            this.anlagenverzeichnisBindingSource.DataSource = this.dBSDataSet1;
+            // 
+            // dBSDataSet1
+            // 
+            this.dBSDataSet1.DataSetName = "DBSDataSet1";
+            this.dBSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // anlagenverzeichnisTableAdapter
+            // 
+            this.anlagenverzeichnisTableAdapter.ClearBeforeFill = true;
+            // 
             // Anlagenverzeichnis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1363, 426);
+            this.ClientSize = new System.Drawing.Size(1341, 426);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Anlagenverzeichnis";
             this.Text = "Anlagenverzeichnis";
             this.Load += new System.EventHandler(this.Anlagenverzeichnis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
