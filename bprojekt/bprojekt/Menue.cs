@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace bprojekt
 {
-    public partial class Menue : Form
+    internal partial class Menue : Form
     {
         Rang r;
         public Menue(Rang a)
         {
             r = a;
-        
+            InitializeComponent();
         }
         public Menue()
         {
@@ -53,10 +53,8 @@ namespace bprojekt
 
         private void Anlagenverzeichnis_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Anlagenverzeichnis angv = new Anlagenverzeichnis();
+            Anlagenverzeichnis angv = new Anlagenverzeichnis(r);
             angv.ShowDialog();
-            this.Close();
         }
     }
 }

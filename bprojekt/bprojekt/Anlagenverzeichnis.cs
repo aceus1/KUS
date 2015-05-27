@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace bprojekt
 {
-    public partial class Anlagenverzeichnis : Form
+    internal partial class Anlagenverzeichnis : Form
     {
+        Rang r;
+        public Anlagenverzeichnis(Rang a)
+        {
+            r = a;
+            InitializeComponent();
+        }
         public Anlagenverzeichnis()
         {
             InitializeComponent();

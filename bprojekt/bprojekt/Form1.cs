@@ -57,6 +57,7 @@ namespace bprojekt
                     Menue menue = new Menue(r);
                     menue.ShowDialog();
                     this.Close();
+                    break;
                 }
                 else
                 {
