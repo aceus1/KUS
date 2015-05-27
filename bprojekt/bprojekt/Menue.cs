@@ -33,5 +33,16 @@ namespace bprojekt
         {
 
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+            this.Close();
+            
+            
+
+        }
     }
 }
