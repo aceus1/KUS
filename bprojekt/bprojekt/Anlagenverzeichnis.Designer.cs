@@ -41,6 +41,11 @@
             this.anlagenverzeichnisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSDataSet1 = new bprojekt.DBSDataSet1();
             this.anlagenverzeichnisTableAdapter = new bprojekt.DBSDataSet1TableAdapters.AnlagenverzeichnisTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
@@ -131,11 +136,51 @@
             // 
             this.anlagenverzeichnisTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(805, 234);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(911, 234);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(1017, 234);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(1123, 234);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(1229, 234);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 5;
+            // 
             // Anlagenverzeichnis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 426);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Anlagenverzeichnis";
             this.Text = "Anlagenverzeichnis";
@@ -144,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.anlagenverzeichnisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,5 +207,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dauerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prozentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn abgangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
