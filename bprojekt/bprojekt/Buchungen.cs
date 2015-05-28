@@ -13,6 +13,11 @@ namespace bprojekt
     internal partial class Buchungen : Form
     {
         Rang r;
+        bool combcheck1 = false;
+        bool combcheck2 = false;
+        bool ustcheck = false;
+        bool wertcheck = false;
+        bool combcheck1 = false;
         public Buchungen(Rang a)
         {
             r = a;
@@ -25,19 +30,18 @@ namespace bprojekt
 
         private void Buchungen_Load(object sender, EventArgs e)
         {
-            comboBox1.BackColor = Color.Red;
-            comboBox2.BackColor = Color.Red;
             Wert.BackColor = Color.Red;
             Ust_Summe.BackColor = Color.Red;
             EA_Datum.BackColor = Color.Red;
             Re_Datum.BackColor = Color.Red;
             // TODO: This line of code loads data into the 'dBSDataSet1.Buchungen' table. You can move, or remove it, as needed.
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
-            comboBox1.Items.Add("Eingangsrechnung");
-            comboBox1.Items.Add("Ausgangsrechnung");
+            comboBox1.Items.Add("Eing.-Re");
+            comboBox1.Items.Add("Ausg.-Re");
             comboBox2.Items.Add("0");
             comboBox2.Items.Add("10");
             comboBox2.Items.Add("20");
+            comboBox2.Text = "Ust";
             if (!r.rangcheck())
             {
                 
@@ -46,8 +50,7 @@ namespace bprojekt
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            double a=double.Parse(Wert.Text)/double.Parse(comboBox2.Text);
-            Ust_Summe.Text =Convert.ToString(a * 100);
+
         }
 
         private void Ust_TextChanged(object sender, EventArgs e)
@@ -62,7 +65,7 @@ namespace bprojekt
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Wert.ReadOnly = false;
         }
         private bool eadatum = false;
         private bool redatum = false; 
@@ -141,13 +144,54 @@ namespace bprojekt
 
         private void Wert_TextChanged(object sender, EventArgs e)
         {
-            //if (comboBox2.Text != "Ust"&&comboBox2.Text!=" "&&Wert.Text!="0")
-            //{
-            //    if (zahl(Wert.Text, Wert.Text.Length))
-            //    {
-            //        Ust_Summe.Text = Convert.ToString(Convert.ToDouble(Wert.Text) * (Convert.ToDouble(comboBox2.Text) / 100));
-            //    }
-            //}
+                if (!string.IsNullOrEmpty(Wert.Text))
+                {
+                    if (Check(Wert.Text))
+                    {
+                        Wert.BackColor = Color.Green;
+                        Ust_Summe.BackColor = Color.Green;
+                        if (comboBox2.Text == "0")
+                        {
+                            Ust_Summe.Text = Wert.Text;
+                        }
+                        else
+                        {
+                            Ust_Summe.Text = Convert.ToString(Convert.ToDouble(Wert.Text) * ((Convert.ToDouble(comboBox2.Text) / 100)));
+
+                        }
+
+                    }
+                    else
+                    {
+                        Wert.BackColor = Color.Red;
+                        Ust_Summe.BackColor = Color.Red;
+                    }
+                }
+            
         }
+         bool Check(string t)
+        {
+            try
+            {
+                double Zahl = double.Parse(t);
+                // keine Exception, Eingabe ist eine Zahl
+                return true;
+            }
+            catch (FormatException)
+            {
+                //kein Zahl
+                return false;
+            }
+        }
+
+         private void Löschen_TextChanged(object sender, EventArgs e)
+         {
+
+         }
+
+         private void button1_Click(object sender, EventArgs e)
+         {
+         }
+
     }
 }

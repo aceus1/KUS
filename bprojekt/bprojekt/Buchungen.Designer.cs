@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Löschen = new System.Windows.Forms.TextBox();
             this.Löschenbutton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buchungenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSet1)).BeginInit();
@@ -133,18 +135,19 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 199);
+            this.comboBox1.Location = new System.Drawing.Point(135, 214);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(102, 21);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Eing./Ausg.";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Wert
             // 
-            this.Wert.Location = new System.Drawing.Point(344, 200);
+            this.Wert.Location = new System.Drawing.Point(344, 215);
             this.Wert.Name = "Wert";
+            this.Wert.ReadOnly = true;
             this.Wert.Size = new System.Drawing.Size(100, 20);
             this.Wert.TabIndex = 3;
             this.Wert.Text = "Wert";
@@ -152,7 +155,7 @@
             // 
             // Ust_Summe
             // 
-            this.Ust_Summe.Location = new System.Drawing.Point(445, 200);
+            this.Ust_Summe.Location = new System.Drawing.Point(446, 215);
             this.Ust_Summe.Name = "Ust_Summe";
             this.Ust_Summe.ReadOnly = true;
             this.Ust_Summe.Size = new System.Drawing.Size(100, 20);
@@ -162,7 +165,7 @@
             // 
             // Re_Datum
             // 
-            this.Re_Datum.Location = new System.Drawing.Point(546, 200);
+            this.Re_Datum.Location = new System.Drawing.Point(548, 215);
             this.Re_Datum.Name = "Re_Datum";
             this.Re_Datum.Size = new System.Drawing.Size(100, 20);
             this.Re_Datum.TabIndex = 5;
@@ -171,7 +174,7 @@
             // 
             // EA_Datum
             // 
-            this.EA_Datum.Location = new System.Drawing.Point(647, 200);
+            this.EA_Datum.Location = new System.Drawing.Point(652, 215);
             this.EA_Datum.Name = "EA_Datum";
             this.EA_Datum.Size = new System.Drawing.Size(100, 20);
             this.EA_Datum.TabIndex = 6;
@@ -180,12 +183,12 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 199);
+            this.comboBox2.Location = new System.Drawing.Point(238, 214);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 21);
             this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Ust";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button1
@@ -196,6 +199,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Speichern";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -212,6 +216,7 @@
             this.Löschen.Name = "Löschen";
             this.Löschen.Size = new System.Drawing.Size(84, 20);
             this.Löschen.TabIndex = 10;
+            this.Löschen.TextChanged += new System.EventHandler(this.Löschen_TextChanged);
             // 
             // Löschenbutton
             // 
@@ -222,11 +227,31 @@
             this.Löschenbutton.Text = "Löschen";
             this.Löschenbutton.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(136, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Ein. / Ausg.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(248, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Ust.";
+            // 
             // Buchungen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 291);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Löschenbutton);
             this.Controls.Add(this.Löschen);
             this.Controls.Add(this.label1);
@@ -273,5 +298,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Löschen;
         private System.Windows.Forms.Button Löschenbutton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
