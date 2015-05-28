@@ -17,7 +17,7 @@ namespace bprojekt
         bool combcheck2 = false;
         bool ustcheck = false;
         bool wertcheck = false;
-        bool combcheck1 = false;
+        //bool combcheck1 = false;
         public Buchungen(Rang a)
         {
             r = a;

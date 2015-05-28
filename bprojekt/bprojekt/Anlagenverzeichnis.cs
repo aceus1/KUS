@@ -35,6 +35,12 @@ namespace bprojekt
             dauerbox.BackColor = Color.Red;
             AbgangBox.BackColor = Color.Red;
             Prozentbox.BackColor = Color.Red;
+            if (r.rangcheck())
+            {
+                label1.Visible = true;
+                deleteanlagenidbox.Visible = true;
+                deletebuttonanlage.Visible = true;
+            }
 
         }
         #region Save&Delete Button
