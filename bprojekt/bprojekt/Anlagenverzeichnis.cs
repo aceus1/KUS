@@ -55,7 +55,7 @@ namespace bprojekt
                         cmd = new OleDbCommand(cmdstr, conn);
                         cmd.ExecuteNonQuery();
                         conn.Close();
-                        Anlagenverzeichnis a = new Anlagenverzeichnis();
+                        Anlagenverzeichnis a = new Anlagenverzeichnis(r);
                         this.Close();
                         a.Show();
                     }
@@ -82,7 +82,7 @@ namespace bprojekt
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     dataGridView1.Update();
-                    Anlagenverzeichnis a = new Anlagenverzeichnis();
+                    Anlagenverzeichnis a = new Anlagenverzeichnis(r);
                     this.Close();
                     a.Show();
                 }

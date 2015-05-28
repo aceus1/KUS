@@ -55,14 +55,14 @@ namespace bprojekt
                 OleDbConnection conn;
                 string cmdstr;
                 conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
-                if (datumbr == true && abfahrtortr == true && zielortr == true && akmstr == true && ekmstr == true)//Wenn alle Felder Grün sind speichert er erst in die Datenbank
+                if (datumbr  && abfahrtortr && zielortr  && akmstr  && ekmstr )//Wenn alle Felder Grün sind speichert er erst in die Datenbank
                 {
                     conn.Open();
                     cmdstr = "INSERT INTO Fahrtenbuch (Datum, Abfahrtsort, Zielort, Anfangskmstand, Endkmstand) VALUES ('" + Datumtb.Text + "','" + Abfahrtsorttb.Text + "','" + Zielorttb.Text + "'," + ankmtb.Text + "," + endkmtb.Text + ")";
                     cmd = new OleDbCommand(cmdstr, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    Fahrtbuch a = new Fahrtbuch();
+                    Fahrtbuch a = new Fahrtbuch(r);
                     this.Close();
                     a.Show();
                 }
@@ -238,7 +238,7 @@ namespace bprojekt
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     dataGridView1.Update();
-                    Fahrtbuch a = new Fahrtbuch();
+                    Fahrtbuch a = new Fahrtbuch(r);
                     this.Close();
                     a.Show(); 
                 }

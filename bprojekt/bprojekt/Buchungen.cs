@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace bprojekt
 {
@@ -15,9 +16,9 @@ namespace bprojekt
         Rang r;
         bool combcheck1 = false;
         bool combcheck2 = false;
-        bool ustcheck = false;
         bool wertcheck = false;
-        bool combcheck1 = false;
+        bool eadatum = false;
+        bool redatum = false; 
         public Buchungen(Rang a)
         {
             r = a;
@@ -36,15 +37,17 @@ namespace bprojekt
             Re_Datum.BackColor = Color.Red;
             // TODO: This line of code loads data into the 'dBSDataSet1.Buchungen' table. You can move, or remove it, as needed.
             this.buchungenTableAdapter.Fill(this.dBSDataSet1.Buchungen);
-            comboBox1.Items.Add("Eing.-Re");
-            comboBox1.Items.Add("Ausg.-Re");
-            comboBox2.Items.Add("0");
-            comboBox2.Items.Add("10");
-            comboBox2.Items.Add("20");
-            comboBox2.Text = "Ust";
+            Art_cbx.Items.Add("ER");
+            Art_cbx.Items.Add("AR");
+            Ust_cbx.Items.Add("0");
+            Ust_cbx.Items.Add("10");
+            Ust_cbx.Items.Add("20");
+            Ust_cbx.Text = "Ust";
             if (!r.rangcheck())
             {
-                
+                label1.Visible = false;
+                Löschenbutton.Visible = false;
+                Löschen.Visible = false;
             }
         }
 
@@ -60,15 +63,14 @@ namespace bprojekt
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            combcheck1 = true;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Wert.ReadOnly = false;
+            combcheck2 = true;
         }
-        private bool eadatum = false;
-        private bool redatum = false; 
 
 
         private void EA_Datum_TextChanged(object sender, EventArgs e)
@@ -150,15 +152,16 @@ namespace bprojekt
                     {
                         Wert.BackColor = Color.Green;
                         Ust_Summe.BackColor = Color.Green;
-                        if (comboBox2.Text == "0")
+                        if (Ust_cbx.Text == "0")
                         {
                             Ust_Summe.Text = Wert.Text;
                         }
                         else
                         {
-                            Ust_Summe.Text = Convert.ToString(Convert.ToDouble(Wert.Text) * ((Convert.ToDouble(comboBox2.Text) / 100)));
+                            Ust_Summe.Text = Convert.ToString(Convert.ToDouble(Wert.Text) * ((Convert.ToDouble(Ust_cbx.Text) / 100)));
 
                         }
+                        wertcheck = true;
 
                     }
                     else
@@ -191,6 +194,77 @@ namespace bprojekt
 
          private void button1_Click(object sender, EventArgs e)
          {
+             try
+             {
+
+                 OleDbCommand cmd;
+                 OleDbConnection conn;
+                 string cmdstr;
+                 conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                 if (combcheck1 && combcheck2 && wertcheck && eadatum && redatum)
+                 {
+
+                     conn.Open();
+                     //cmdstr = "INSERT INTO Buchungen ([Art], [Ust], [Wert], [Ust-Summe], [Re-Datum], [EA-Datum]) VALUES ('" + Art_cbx.Text + "'," + Ust_cbx.Text + "," + Wert.Text + "," + Ust_Summe.Text + ",'" + Re_Datum.Text + "','" + EA_Datum.Text + "');";
+                     cmd = new OleDbCommand();
+                     cmd.CommandType = CommandType.Text;
+                     cmd.CommandText = "INSERT INTO Buchungen ([Art], [Ust], [Wert], [Ust-Summe], [Re-Datum], [EA-Datum]) VALUES (?,?,?,?,?,?);";
+                     cmd.Parameters.AddWithValue("@Art", Art_cbx.Text);
+                     cmd.Parameters.AddWithValue("@Ust", Ust_cbx.Text);
+                     cmd.Parameters.AddWithValue("@Wert", Wert.Text);
+                     cmd.Parameters.AddWithValue("@Ust-Summe", Ust_Summe.Text);
+                     cmd.Parameters.AddWithValue("@Re-Datum", Re_Datum.Text);
+                     cmd.Parameters.AddWithValue("@EA-Datum", EA_Datum.Text);
+                     cmd.Connection = conn;
+                     //cmd = new OleDbCommand(cmdstr, conn);
+                     cmd.ExecuteNonQuery();
+                     conn.Close();
+                     Buchungen a = new Buchungen(r);
+                     this.Close();
+                     a.Show();
+                 }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.ToString());
+             }
+         }
+
+         private void label1_Click(object sender, EventArgs e)
+         {
+
+         }
+
+         private void Löschenbutton_Click(object sender, EventArgs e)
+         {
+             try
+             {
+                 if (Löschen.Text != "")
+                 {
+                     string cmdstr = "DELETE FROM Buchungen WHERE Belegnummer = " + Löschen.Text;
+                     OleDbCommand cmd;
+                     OleDbConnection conn;
+                     conn = new OleDbConnection(Properties.Settings.Default.DBSConnectionString1);
+                     conn.Open();
+                     cmd = new OleDbCommand(cmdstr, conn);
+                     cmd.ExecuteNonQuery();
+                     conn.Close();
+                     dataGridView1.Update();
+                     Buchungen a = new Buchungen(r);
+                     this.Close();
+                     a.Show();
+                 }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.ToString());
+             }
+
+         }
+
+         private void buchungenBindingSource_CurrentChanged(object sender, EventArgs e)
+         {
+
          }
 
     }

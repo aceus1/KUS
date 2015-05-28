@@ -40,12 +40,12 @@
             this.buchungenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSDataSet1 = new bprojekt.DBSDataSet1();
             this.buchungenTableAdapter = new bprojekt.DBSDataSet1TableAdapters.BuchungenTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Art_cbx = new System.Windows.Forms.ComboBox();
             this.Wert = new System.Windows.Forms.TextBox();
             this.Ust_Summe = new System.Windows.Forms.TextBox();
             this.Re_Datum = new System.Windows.Forms.TextBox();
             this.EA_Datum = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Ust_cbx = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Löschen = new System.Windows.Forms.TextBox();
@@ -123,6 +123,7 @@
             // 
             this.buchungenBindingSource.DataMember = "Buchungen";
             this.buchungenBindingSource.DataSource = this.dBSDataSet1;
+            this.buchungenBindingSource.CurrentChanged += new System.EventHandler(this.buchungenBindingSource_CurrentChanged);
             // 
             // dBSDataSet1
             // 
@@ -135,13 +136,13 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Art_cbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Art_cbx.FormattingEnabled = true;
+            this.Art_cbx.Location = new System.Drawing.Point(135, 214);
+            this.Art_cbx.Name = "comboBox1";
+            this.Art_cbx.Size = new System.Drawing.Size(102, 21);
+            this.Art_cbx.TabIndex = 1;
+            this.Art_cbx.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Wert
             // 
@@ -183,13 +184,13 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 214);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.Ust_cbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ust_cbx.FormattingEnabled = true;
+            this.Ust_cbx.Location = new System.Drawing.Point(238, 214);
+            this.Ust_cbx.Name = "comboBox2";
+            this.Ust_cbx.Size = new System.Drawing.Size(100, 21);
+            this.Ust_cbx.TabIndex = 7;
+            this.Ust_cbx.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -209,6 +210,7 @@
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Belegnummer zum Löschen";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Löschen
             // 
@@ -226,6 +228,7 @@
             this.Löschenbutton.TabIndex = 11;
             this.Löschenbutton.Text = "Löschen";
             this.Löschenbutton.UseVisualStyleBackColor = true;
+            this.Löschenbutton.Click += new System.EventHandler(this.Löschenbutton_Click);
             // 
             // label2
             // 
@@ -256,12 +259,12 @@
             this.Controls.Add(this.Löschen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.Ust_cbx);
             this.Controls.Add(this.EA_Datum);
             this.Controls.Add(this.Re_Datum);
             this.Controls.Add(this.Ust_Summe);
             this.Controls.Add(this.Wert);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Art_cbx);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Buchungen";
@@ -288,12 +291,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ustSummeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eADatumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Art_cbx;
         private System.Windows.Forms.TextBox Wert;
         private System.Windows.Forms.TextBox Ust_Summe;
         private System.Windows.Forms.TextBox Re_Datum;
         private System.Windows.Forms.TextBox EA_Datum;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox Ust_cbx;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Löschen;
