@@ -38,11 +38,11 @@ namespace bprojekt
             zielortr = false;
             akmstr = false;
             ekmstr = false;
-            if (!r.rangcheck())
+            if (r.rangcheck())
             {
-                label1.Visible = false;
-                DeleteID.Visible = false;
-                button1.Visible = false;
+                label1.Visible = true;
+                DeleteID.Visible = true;
+                button1.Visible = true;
             }
         }
 

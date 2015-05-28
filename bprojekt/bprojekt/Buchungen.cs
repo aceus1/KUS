@@ -17,8 +17,12 @@ namespace bprojekt
         bool combcheck1 = false;
         bool combcheck2 = false;
         bool wertcheck = false;
+<<<<<<< HEAD
         bool eadatum = false;
         bool redatum = false; 
+=======
+        //bool combcheck1 = false;
+>>>>>>> origin/master
         public Buchungen(Rang a)
         {
             r = a;

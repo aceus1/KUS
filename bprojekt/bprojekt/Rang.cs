@@ -21,14 +21,6 @@ namespace bprojekt
                 //das ist ein Admin
                 return true;
             }
-            else
-            {
-                if (rang==0)
-                {
-                    //gast
-                    return false;
-                }
-            }
             return false;
         }
     }

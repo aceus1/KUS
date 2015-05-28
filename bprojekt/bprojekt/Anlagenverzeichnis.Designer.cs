@@ -217,6 +217,7 @@
             this.deletebuttonanlage.TabIndex = 11;
             this.deletebuttonanlage.Text = "Löschen";
             this.deletebuttonanlage.UseVisualStyleBackColor = true;
+            this.deletebuttonanlage.Visible = false;
             this.deletebuttonanlage.Click += new System.EventHandler(this.deletebuttonanlage_Click);
             // 
             // label1
@@ -227,6 +228,7 @@
             this.label1.Size = new System.Drawing.Size(144, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "AnlagenverzeichnisID";
+            this.label1.Visible = false;
             // 
             // deleteanlagenidbox
             // 
@@ -234,6 +236,7 @@
             this.deleteanlagenidbox.Name = "deleteanlagenidbox";
             this.deleteanlagenidbox.Size = new System.Drawing.Size(141, 22);
             this.deleteanlagenidbox.TabIndex = 13;
+            this.deleteanlagenidbox.Visible = false;
             this.deleteanlagenidbox.TextChanged += new System.EventHandler(this.deleteanlagenidbox_TextChanged);
             // 
             // Anlagenverzeichnis
