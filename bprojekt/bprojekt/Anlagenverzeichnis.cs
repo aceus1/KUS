@@ -99,7 +99,7 @@ namespace bprojekt
             }
         }
         #endregion
-        //TODO: Datenbank einlesen / auslesen / speichern / löschen
+        //TODO: Datenbank einlesen / auslesen / speichern / löschen - Fertig
         #region Textboxenrichtig Variablen
         private bool gegenstandboxr = false;
         private bool anschaffdatumboxr = false;
